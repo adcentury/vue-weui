@@ -1,0 +1,38 @@
+{
+  "name": "vue-weui",
+  "version": "0.0.1",
+  "description": "WeUI with love of vue",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node examples/server.js",
+    "build": "export NODE_ENV=production && webpack --progress --hide-modules"
+  },
+  "dependencies": {
+    "vue": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.1.2",
+    "babel-loader": "^6.1.0",
+    "babel-plugin-transform-runtime": "^6.1.2",
+    "babel-preset-es2015": "^6.1.2",
+    "babel-preset-stage-0": "^6.1.2",
+    "babel-runtime": "^6.0.14",
+    "css-loader": "^0.21.0",
+    "express": "^4.13.3",
+    "file-loader": "^0.8.4",
+    "less": "^2.5.3",
+    "less-loader": "^2.2.1",
+    "style-loader": "^0.13.0",
+    "template-html-loader": "0.0.3",
+    "vue-hot-reload-api": "^1.2.0",
+    "vue-html-loader": "^1.0.0",
+    "vue-loader": "^7.0.0",
+    "vue-router": "^0.7.6",
+    "webpack": "^1.12.2",
+    "webpack-dev-middleware": "^1.2.0",
+    "webpack-dev-server": "^1.12.0",
+    "webpack-hot-middleware": "^2.5.0"
+  },
+  "author": "Lei Lei",
+  "license": "MIT"
+}
