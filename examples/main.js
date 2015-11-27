@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import {App, Buttons, Cells} from './containers';
+import {App, Button, Cell, Toast} from './containers';
 
 Vue.config.debug = true;
 
@@ -11,11 +11,14 @@ router.map({
   '/': {
     component: App
   },
-  '/buttons': {
-    component: Buttons
+  '/button': {
+    component: Button
   },
-  '/cells': {
-    component: Cells
+  '/cell': {
+    component: Cell
+  },
+  '/toast': {
+    component: Toast
   }
 });
-router.start(Vue.extend({}), '#app');
+router.start(Vue.extend({}), '#container');

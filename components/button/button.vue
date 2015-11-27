@@ -10,7 +10,7 @@ export default {
     type: {
       type: String,
       default: 'primary',
-      required: true
+      required: false
     },
 
     disabled: {
@@ -41,7 +41,5 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../base/reset';
-
-@import 'weui_button';
+// @import 'weui_button';
 </style>

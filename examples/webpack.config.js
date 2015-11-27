@@ -20,7 +20,7 @@ module.exports = {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
       { test: /\.vue$/, loader: 'vue'},
-      { test: /\.css$/, loader: 'style!css' },
+      { test: /\.less$/, loader: 'style!css!autoprefixer!less' },
       { test: /\.(png|jpg|gif)$/, loader: 'file?name=[name].[ext]?[hash]' }
     ]
   },

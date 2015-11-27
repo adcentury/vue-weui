@@ -1,5 +1,5 @@
 <template>
-<a :href="link" class="weui_cell" v-if="link"><slot></slot></a>
+<a :href="link" v-link="vLink" class="weui_cell" v-if="link || vLink"><slot></slot></a>
 <div class="weui_cell" v-else><slot></slot></div>
 </template>
 
@@ -8,7 +8,10 @@ export default {
   props: {
     link: {
       type: String,
-      default: '',
+      required: false
+    },
+    vLink: {
+      type: null,
       required: false
     }
   }

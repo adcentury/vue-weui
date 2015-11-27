@@ -1,22 +1,18 @@
 <template>
-<label :for="id" class="weui_cell weui_check_label">
+<div class="weui_cell weui_cell_switch">
   <cell-body>{{{label}}}</cell-body>
   <cell-footer>
-    <input type="radio" :name="name" class="weui_check" :id="id" :value="value" v-model="picked">
-    <span class="weui_icon_checked"></span>
+    <input type="checkbox" :name="name" class="weui_switch" v-model="on">
   </cell-footer>
-</label>
+</div>
 </template>
 
 <script>
 import CellBody from './cell-body.vue';
 import CellFooter from './cell-footer.vue';
+
 export default {
   props: {
-    id: {
-      type: String,
-      required: false
-    },
     name: {
       type: String,
       required: false
@@ -29,8 +25,8 @@ export default {
       type: String,
       required: true
     },
-    picked: {
-      type: String,
+    on: {
+      type: null,
       required: true,
       twoWay: true
     }

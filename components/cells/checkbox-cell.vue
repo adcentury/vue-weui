@@ -1,16 +1,17 @@
 <template>
 <label :for="id" class="weui_cell weui_check_label">
-  <cell-body>{{{label}}}</cell-body>
-  <cell-footer>
-    <input type="radio" :name="name" class="weui_check" :id="id" :value="value" v-model="picked">
+  <cell-header>
+    <input type="checkbox" :name="name" class="weui_check" :id="id" :value="value" v-model="checked">
     <span class="weui_icon_checked"></span>
-  </cell-footer>
+  </cell-header>
+  <cell-body>{{{label}}}</cell-body>
 </label>
 </template>
 
 <script>
+import CellHeader from './cell-header.vue';
 import CellBody from './cell-body.vue';
-import CellFooter from './cell-footer.vue';
+
 export default {
   props: {
     id: {
@@ -29,16 +30,16 @@ export default {
       type: String,
       required: true
     },
-    picked: {
-      type: String,
+    checked: {
+      type: null,
       required: true,
       twoWay: true
     }
   },
 
   components: {
-    CellBody,
-    CellFooter
+    CellHeader,
+    CellBody
   }
 }
 </script>
