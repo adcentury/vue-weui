@@ -1,6 +1,6 @@
 {
   "name": "vue-weui",
-  "version": "0.0.1",
+  "version": "0.0.2-alpha1",
   "description": "WeUI with love of vue",
   "main": "src/index.js",
   "scripts": {
@@ -34,6 +34,13 @@
     "webpack-dev-server": "^1.12.0",
     "webpack-hot-middleware": "^2.5.0"
   },
-  "author": "Lei Lei",
+  "author": {
+    "name": "Lei Lei",
+    "email": "adcentury100@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adcentury/vue-weui"
+  },
   "license": "MIT"
 }

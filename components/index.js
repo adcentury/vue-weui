@@ -20,3 +20,7 @@ export CellSelect from './cells/cell-select.vue';
 export Toptips from './tips/toptips.vue';
 
 export Toast from './toast/toast.vue';
+
+export Dialog from './dialog/dialog.vue';
+
+export Progress from './progress/progress.vue';
