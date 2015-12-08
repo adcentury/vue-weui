@@ -6,10 +6,18 @@
 <script>
 export default {
   props: {
+    /**
+     * 跳转链接，若设置则此列表项可点击跳转
+     */
     link: {
       type: String,
       required: false
     },
+
+    /**
+     * vue-router使用的跳转链接
+     * 若使用vue-router，推荐使用v-link而非link
+     */
     vLink: {
       type: null,
       required: false

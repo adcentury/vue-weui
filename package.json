@@ -1,11 +1,12 @@
 {
   "name": "vue-weui",
-  "version": "0.0.2-alpha1",
+  "version": "0.1.0",
   "description": "WeUI with love of vue",
-  "main": "src/index.js",
+  "main": "components/index.js",
   "scripts": {
+    "clean": "rimraf dist",
     "start": "node examples/server.js",
-    "build": "export NODE_ENV=production && webpack --progress --hide-modules"
+    "build": "webpack --progress --hide-modules"
   },
   "dependencies": {
     "vue": "^1.0.0"
@@ -21,8 +22,10 @@
     "css-loader": "^0.21.0",
     "express": "^4.13.3",
     "file-loader": "^0.8.4",
+    "glob": "^6.0.1",
     "less": "^2.5.3",
     "less-loader": "^2.2.1",
+    "rimraf": "^2.4.4",
     "style-loader": "^0.13.0",
     "template-html-loader": "0.0.3",
     "vue-hot-reload-api": "^1.2.0",

@@ -7,7 +7,9 @@
   <div class="bd">
     <cells type="access" class="global_navs">
       <cell v-for="item in list" :v-link="{path: '/' + item.url}">
-        <cell-header></cell-header>
+        <cell-header>
+          <img :src="'./images/' + item.image + '.png'" class="icon_nav">
+        </cell-header>
         <cell-body>
           <p>{{item.text}}</p>
         </cell-body>
@@ -26,31 +28,40 @@ export default {
     return {
       list: [{
         text: 'Button',
-        url: 'button'
+        url: 'button',
+        image: 'icon_nav_button'
       }, {
         text: 'Cell',
-        url: 'cell'
+        url: 'cell',
+        image: 'icon_nav_cell'
       }, {
         text: 'Toast',
-        url: 'toast'
+        url: 'toast',
+        image: 'icon_nav_toast'
       }, {
         text: 'Dialog',
-        url: 'dialog'
+        url: 'dialog',
+        image: 'icon_nav_dialog'
       }, {
         text: 'Progress',
-        url: 'progress'
+        url: 'progress',
+        image: 'icon_nav_button'
       }, {
         text: 'Msg Page',
-        url: 'message'
+        url: 'message',
+        image: 'icon_nav_msg'
       }, {
         text: 'Article Page',
-        url: 'article'
+        url: 'article',
+        image: 'icon_nav_article'
       }, {
         text: 'ActionSheet',
-        url: 'action_sheet'
+        url: 'actionsheet',
+        image: 'icon_nav_actionSheet'
       }, {
         text: 'Icons',
-        url: 'icons'
+        url: 'icons',
+        image: 'icon_nav_icons'
       }]
     };
   },

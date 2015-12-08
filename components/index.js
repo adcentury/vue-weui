@@ -24,3 +24,11 @@ export Toast from './toast/toast.vue';
 export Dialog from './dialog/dialog.vue';
 
 export Progress from './progress/progress.vue';
+
+export Message from './message/message.vue';
+
+export Article from './article/article.vue';
+
+export Actionsheet from './actionsheet/actionsheet.vue';
+
+export Icon from './icon/icon.vue';

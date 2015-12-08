@@ -1,14 +1,23 @@
 var webpack = require('webpack')
+var glob = require('glob');
+
+var entries = {};
+glob.sync('./components/**/*.vue').forEach(function(file) {
+  entries[file.slice(2, -5)] = file;
+});
 
 module.exports = {
-  entry: './src/main.js',
+  entry: entries,
   output: {
     path: './dist',
     publicPath: 'dist/',
-    filename: 'build.js'
+    filename: '[name].js'
   },
   module: {
     loaders: [
+      {
+        test: /\.js$/, exclude: /node_modules/, loader: 'babel'
+      },
       {
         test: /\.vue$/,
         loader: 'vue'

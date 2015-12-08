@@ -14,22 +14,41 @@ import CellBody from './cell-body.vue';
 
 export default {
   props: {
+    /**
+     * checkbox input的id
+     */
     id: {
       type: String,
       required: false
     },
+
+    /**
+     * checkbox input的name
+     */
     name: {
       type: String,
       required: false
     },
+
+    /**
+     * checkbox input的value
+     */
     value: {
       type: String,
       required: false
     },
+
+    /**
+     * 显示的文本内容
+     */
     label: {
       type: String,
       required: true
     },
+
+    /**
+     * 选中项的数据绑定，用于checkbox input的v-model
+     */
     checked: {
       type: null,
       required: true,

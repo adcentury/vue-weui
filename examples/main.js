@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import {App, Button, Cell, Toast, Dialog, Progress} from './containers';
+import {App, Button, Cell, Toast, Dialog, Progress, Message, Article, Actionsheet, Icons} from './containers';
 
 Vue.config.debug = true;
 
@@ -25,6 +25,19 @@ router.map({
   },
   '/progress': {
     component: Progress
+  },
+  '/message': {
+    component: Message
+  },
+  '/article': {
+    component: Article
+  },
+  '/actionsheet': {
+    component: Actionsheet
+  },
+  '/icons': {
+    component: Icons
   }
 });
+
 router.start(Vue.extend({}), '#container');

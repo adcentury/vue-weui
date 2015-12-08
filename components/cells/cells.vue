@@ -5,10 +5,17 @@
 <script>
 export default {
   props: {
+    /**
+     * Cells类型
+     * access: 带跳转的列表项容器
+     * form: 表单容器
+     * radio: 单选列表项容器
+     * checkbox: 多选列表项容器
+     */
     type: {
       type: String,
       default: '',
-      require: false
+      required: false
     }
   },
   
@@ -19,11 +26,3 @@ export default {
   }
 };
 </script>
-
-<style lang="less">
-// @import 'weui_cell_global';
-// @import 'weui_access';
-// @import 'weui_check';
-// @import 'weui_form';
-// @import 'weui_switch';
-</style>
