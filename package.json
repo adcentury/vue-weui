@@ -6,7 +6,8 @@
   "scripts": {
     "clean": "rimraf dist",
     "start": "node examples/server.js",
-    "build": "webpack --progress --hide-modules"
+    "build": "webpack --progress --hide-modules",
+    "build:examples": "rimraf examples/__build__ && webpack --config examples/webpack.config.prod.js"
   },
   "dependencies": {
     "vue": "^1.0.0"

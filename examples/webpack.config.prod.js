@@ -1,20 +1,29 @@
-var path = require('path')
-var webpack = require('webpack')
+var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
-
-  devtool: 'inline-source-map',
-
-  entry: [
-    'webpack-hot-middleware/client',
-    path.join(__dirname, 'main.js')
-  ],
+  devtool: 'source-map',
+  entry: path.join(__dirname, 'main.js'),
 
   output: {
-    path: __dirname + '/__build__',
+    path: path.join(__dirname, '__build__'),
     publicPath: '/__build__/',
     filename: 'bundle.js'
   },
+
+  plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false
+      }
+    })
+  ],
 
   module: {
     loaders: [
@@ -35,12 +44,5 @@ module.exports = {
     alias: {
       'vue-weui': path.join(__dirname, '..', 'components')
     }
-  },
-
-  plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
-  ]
-
-}
+  }
+};

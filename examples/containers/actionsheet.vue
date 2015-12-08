@@ -6,7 +6,8 @@
   <div class="bd spacing">
     <weui-button type="primary" @click="showActionsheet">点击上拉ActionSheet</weui-button>
   </div>
-  <actionsheet :show.sync="actionsheetShow" :menus="actionSheetMenus" :actions="actionSheetActions"></actionsheet>
+  <actionsheet :show.sync="actionsheetShow" :menus="actionSheetMenus" :actions="actionSheetActions"
+    @weui-menu-click="handleMenuClick" @weui-action-click="handleActionClick"></actionsheet>
 </div>
 </template>
 
@@ -32,6 +33,14 @@ export default {
   methods: {
     showActionsheet() {
       this.actionsheetShow = true;
+    },
+
+    handleMenuClick(key) {
+      alert(`你点击了菜单【${key}】`);
+    },
+
+    handleActionClick(key) {
+      alert('你点击了操作项，Actionsheet要关闭了');
     }
   },
 

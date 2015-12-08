@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import './example.css';
 import {App, Button, Cell, Toast, Dialog, Progress, Message, Article, Actionsheet, Icons} from './containers';
+
 
 Vue.config.debug = true;
 

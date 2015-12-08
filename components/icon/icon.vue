@@ -5,14 +5,27 @@
 <script>
 export default {
   props: {
+    /**
+     * 图标名称，可能的取值有
+     * success, success_circle, success_no_circle,
+     * info, waiting, waiting_circle, circle,
+     * warn, download, info_circle, cancel
+     */
     name: {
       type: String,
       required: true
     },
 
+    /**
+     * 图标类型
+     * default: 默认小图标（默认）
+     * message: 用于消息页的大图标
+     * safe: 轮廓为盾牌的大图标
+     */
     type: {
       type: String,
-      required: false
+      required: false,
+      default: 'default'
     }
   },
 

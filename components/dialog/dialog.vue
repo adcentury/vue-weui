@@ -17,40 +17,48 @@
 <script>
 export default {
   props: {
+    /**
+     * 对话框类型
+     * alert: 提示框，只包含确定按钮（默认）
+     * confirm: 询问框，包含确定和取消按钮
+     */
     type: {
       type: String,
-      required: true,
+      required: false,
       default: 'alert'
     },
 
+    /**
+     * 对话框标题
+     */
     title: {
       type: String,
       required: true
     },
 
-    show: {
-      type: Boolean,
-      required: true,
-      default: true
-    },
-
-    cancelButton: {
-      type: String,
-      required: false,
-      default: '取消'
-    },
-
+    /**
+     * 确定按钮名称
+     */
     confirmButton: {
       type: String,
       required: false,
       default: '确定'
+    },
+
+    /**
+     * 取消按钮名称
+     */
+    cancelButton: {
+      type: String,
+      required: false,
+      default: '取消'
     }
+
   },
 
   methods: {
     dispathEventAndClose(event) {
       this.$dispatch(event);
-      this.show = false;
     }
   }
 }

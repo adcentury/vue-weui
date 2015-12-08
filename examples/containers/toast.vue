@@ -8,7 +8,7 @@
     <weui-button type="primary" @click="showLoadingToast">点击弹出Loading Toast</weui-button>
   </div>
   <toast v-show="toastShow">已完成</toast>
-  <toast :loading="true" v-show="loadingToastShow">数据加载中</toast>
+  <toast type="loading" v-show="loadingToastShow">数据加载中</toast>
 </div>
 </template>
 

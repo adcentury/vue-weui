@@ -23,36 +23,72 @@ import CellTextarea from './cell-textarea.vue';
 
 export default {
   props: {
+    /**
+     * 输入框的类型
+     * text: 单行输入框（默认）
+     * textarea：文本域
+     */
     type: {
       type: String,
       required: false,
       default: 'text'
     },
+
+    /**
+     * 输入框的id
+     * @type {Object}
+     */
     id: {
       type: String,
       required: false
     },
+
+    /**
+     * 输入框的name
+     */
     name: {
       type: String,
       required: false
     },
+
+    /**
+     * 输入框的placeholder
+     */
     placeholder: {
       type: String,
       required: false
     },
+
+    /**
+     * 输入框的标签，会显示在最前方
+     */
+    label: {
+      type: String,
+      required: false
+    },
+
+    /**
+     * 输入框的数据绑定，会作为input或textarea的v-model
+     */
     value: {
       type: String,
       required: true,
       twoWay: true
     },
-    label: {
-      type: String,
-      required: false
-    },
+
+    /**
+     * 验证码的url，若设置则验证码会显示在最后
+     * @type {Object}
+     */
     vcode: {
       type: String,
       required: false
     },
+
+    /**
+     * 是否为表单报错的列表项
+     * 若为true则文字会标红，且会显示红色感叹号
+     */
     warn: {
       type: Boolean,
       required: false,

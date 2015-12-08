@@ -1,5 +1,5 @@
 <template>
-<div class="weui_cells" :class="typeClass"><slot></div>
+<div class="weui_cells" :class="typeClass"><slot></slot></div>
 </template>
 
 <script>
