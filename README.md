@@ -40,30 +40,21 @@ npm install vue-weui --save
 
 ### 引用
 
-一共有三种引用vue-weui的方案：
+#### ES6
 
 ```javascript
 // 引用所有组件
-import * as VueWeui from 'vue-weui';
+import VueWeui from 'vue-weui';
 
 export default {
   components: VueWeui
 };
 
 // 引用部分组件
-import {Cells, Cell, CellHeader, CellBody, CellFoot, Button} from 'vue-weui';
-
-export default {
-  components: {
-    Cells,
-    Cell,
-    ...
-    'weui-button': Button
-  }
-};
-
+import {Dialog} from 'vue-weui';
+// 或
 // 只引用需要的文件，减少文件大小
-import Dialog from 'vue-weui/components/dialog/dialog.vue';
+import Dialog from 'vue-weui/components/dialog/dialog';
 
 export default {
   components: {
@@ -71,6 +62,20 @@ export default {
   }
 };
 
+```
+
+#### CommonJS
+
+```javascript
+var Dialog = require('vue-weui').Dialog;
+// 或
+var Dialog = require('vue-weui/components/dialog/dialog');
+
+new Vue({
+  components: {
+    'dialog': Dialog
+  }
+});
 ```
 
 ### 组件列表和使用说明

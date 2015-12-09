@@ -1,34 +1,63 @@
-export ButtonArea from './button/button-area.vue';
-export Button from './button/button.vue';
+import ButtonArea from './button/button-area.vue';
+import Button from './button/button.vue';
 
-export CellsTitle from './cells/cells-title.vue';
-export CellsTips from './cells/cells-tips.vue';
-export Cells from './cells/cells.vue';
-export Cell from './cells/cell.vue';
-export RadioCell from './cells/radio-cell.vue';
-export CheckboxCell from './cells/checkbox-cell.vue';
-export SwitchCell from './cells/switch-cell.vue';
-export InputCell from './cells/input-cell.vue';
-export SelectCell from './cells/select-cell.vue';
-export CellHeader from './cells/cell-header.vue';
-export CellBody from './cells/cell-body.vue';
-export CellFooter from './cells/cell-footer.vue';
+import CellsTitle from './cells/cells-title.vue';
+import CellsTips from './cells/cells-tips.vue';
+import Cells from './cells/cells.vue';
+import Cell from './cells/cell.vue';
+import RadioCell from './cells/radio-cell.vue';
+import CheckboxCell from './cells/checkbox-cell.vue';
+import SwitchCell from './cells/switch-cell.vue';
+import InputCell from './cells/input-cell.vue';
+import SelectCell from './cells/select-cell.vue';
+import CellHeader from './cells/cell-header.vue';
+import CellBody from './cells/cell-body.vue';
+import CellFooter from './cells/cell-footer.vue';
 
-export CellInput from './cells/cell-input.vue';
-export CellSelect from './cells/cell-select.vue';
+import CellInput from './cells/cell-input.vue';
+import CellSelect from './cells/cell-select.vue';
 
-export Toptips from './tips/toptips.vue';
+import Toptips from './tips/toptips.vue';
 
-export Toast from './toast/toast.vue';
+import Toast from './toast/toast.vue';
 
-export Dialog from './dialog/dialog.vue';
+import Dialog from './dialog/dialog.vue';
 
-export Progress from './progress/progress.vue';
+import Progress from './progress/progress.vue';
 
-export Message from './message/message.vue';
+import Message from './message/message.vue';
 
-export Article from './article/article.vue';
+import Article from './article/article.vue';
 
-export Actionsheet from './actionsheet/actionsheet.vue';
+import Actionsheet from './actionsheet/actionsheet.vue';
 
-export Icon from './icon/icon.vue';
+import Icon from './icon/icon.vue';
+
+const VueWeui = {
+  ButtonArea,
+  Button,
+  CellsTitle,
+  CellsTips,
+  Cells,
+  Cell,
+  RadioCell,
+  CheckboxCell,
+  SwitchCell,
+  InputCell,
+  SelectCell,
+  CellHeader,
+  CellBody,
+  CellFooter,
+  CellInput,
+  CellSelect,
+  Toptips,
+  Toast,
+  Dialog,
+  Progress,
+  Message,
+  Article,
+  Actionsheet,
+  Icon
+};
+
+module.exports = VueWeui;

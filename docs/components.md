@@ -49,7 +49,7 @@
 
 * props：
 
-```
+```javascript
 /**
  * 按钮颜色类型
  * primary: 主色
@@ -97,7 +97,7 @@ plain: {
 
 一些常用结构如下：
 
-```
+```html
 <cells-title>标题</cells-title>
 
 <!-- 普通列表项 -->
@@ -153,7 +153,7 @@ Cells底部说明文字
 
 * props
 
-```
+```javascript
 /**
  * Cells类型
  * access: 带跳转的列表项容器
@@ -174,7 +174,7 @@ type: {
 
 * props
 
-```
+```javascript
 /**
  * 跳转链接，若设置，则此列表项会变为链接
  */
@@ -209,7 +209,7 @@ Cell一般用于普通的文本、图标或链接列表项，若为表单列表�
 
 * props
 
-```
+```javascript
 /**
  * radio input的id
  */
@@ -258,7 +258,7 @@ picked: {
 
 * props
 
-```
+```javascript
 /**
  * checkbox input的id
  */
@@ -311,7 +311,7 @@ checked: {
 
 * props
 
-```
+```javascript
 /**
  * checkbox input的id
  */
@@ -365,7 +365,7 @@ on: {
 
 * props
 
-```
+```javascript
 /**
  * 输入框的类型
  * text: 单行输入框（默认）
@@ -443,7 +443,7 @@ warn: {
 
 选择框列表项，会包含一个`<select>`
 
-```
+```javascript
 /**
  * 选项数组
  */
@@ -487,7 +487,7 @@ after: {
 
 如图，普通选择框会占据整个宽度，其代码为
 
-```
+```html
 <select-cell
   :options="['微信号', 'QQ号', 'Email']"
   :selected.sync="selected">
@@ -500,7 +500,7 @@ after: {
 
 前置选择框的`select`被存放于`header`中，因此还需通过`slot`为其指定`body`
 
-```
+```html
 <select-cell
   :before="true"
   :options="['+86', '+80', '+84', '+87']"
@@ -520,7 +520,7 @@ after: {
 
 后置选择框可以包含`header`，同样通过`slot`进行指定
 
-```
+```html
 <select-cell
   :after="true"
   :options="['中国', '美国', '英国']"
@@ -541,7 +541,7 @@ after: {
 
 * props
 
-```
+```javascript
 /**
  * toast类型
  * icon: 包含图标的提示框（默认）
@@ -558,7 +558,7 @@ type: {
 
 可以通过`v-show`来控制Toast是否显示
 
-```
+```html
 <toast v-show="true">显示的Toast</toast>
 <toast v-show="false">不显示的Toast</toast>
 <toast v-show="toastControll">根据toastControll的值来判断</toast>
@@ -570,7 +570,7 @@ type: {
 
 * props
 
-```
+```javascript
 /**
  * 对话框类型
  * alert: 提示框，只包含确定按钮（默认）
@@ -617,7 +617,7 @@ cancelButton: {
 
 * 示例
 
-```
+```html
 <template>
 <dialog v-show="dialogControl" type="confirm" title="标题"
   @weui-dialog-confirm="handleDialogAction('确定')"
@@ -657,7 +657,7 @@ export default {
 
 * props
 
-```
+```javascript
 /**
  * 进度，最小为0，最大为100
  */
@@ -694,7 +694,7 @@ hasCancelButton: {
 
 * props
 
-```
+```javascript
 /**
  * 消息图标名称
  * 若设置，则会在最上方显示大图标
@@ -733,7 +733,7 @@ title: {
 
 * props
 
-```
+```javascript
 /**
  * 双向绑定的数据，用于控制是否显示Actionsheet
  */
@@ -778,7 +778,7 @@ actions: {
 
 * props
 
-```
+```javascript
 /**
  * 图标名称，可能的取值有
  * success, success_circle, success_no_circle,
