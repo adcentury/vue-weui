@@ -3,3 +3,4 @@ node_modules
 dist
 
 examples/__build__
+examples/dist
