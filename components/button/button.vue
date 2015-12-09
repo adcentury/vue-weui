@@ -55,7 +55,3 @@ export default {
   }
 }
 </script>
-
-<style lang="less">
-// @import 'weui_button';
-</style>

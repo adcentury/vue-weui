@@ -20,7 +20,7 @@
 
 ### 安装WeUI
 
-vue-weui中组件与css完全解绑，既给予了开发者极大地自主性和灵活性，也能最大限度减少文件大小。
+vue-weui中组件与css完全解绑，既给予了开发者自主性和灵活性，也能最大限度减少文件大小。
 
 推荐使用微信CDN（微信浏览器内置）
 
@@ -54,7 +54,7 @@ export default {
 import {Dialog} from 'vue-weui';
 // 或
 // 只引用需要的文件，减少文件大小
-import Dialog from 'vue-weui/components/dialog/dialog';
+import Dialog from 'vue-weui/components/dialog/dialog.vue';
 
 export default {
   components: {
@@ -69,7 +69,7 @@ export default {
 ```javascript
 var Dialog = require('vue-weui').Dialog;
 // 或
-var Dialog = require('vue-weui/components/dialog/dialog');
+var Dialog = require('vue-weui/components/dialog/dialog.vue');
 
 new Vue({
   components: {
