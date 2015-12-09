@@ -2,6 +2,15 @@
   "name": "vue-weui",
   "version": "0.1.0",
   "description": "WeUI with love of vue",
+  "keywords": [
+    "weui",
+    "vue",
+    "vue weui",
+    "vue-weui",
+    "vue components",
+    "mobile ui",
+    "wechat mobile ui"
+  ],
   "main": "components/index.js",
   "scripts": {
     "start": "node examples/server.js",
