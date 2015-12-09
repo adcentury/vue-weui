@@ -1,0 +1,45 @@
+<template>
+<a :href="link" v-link="routerLink" class="weui_cell" v-if="link || routerLink">
+  <cell-header><slot name="header"></slot></cell-header>
+  <cell-body><slot name="body"></slot></cell-body>
+  <cell-footer><slot name="footer"></slot></cell-footer>
+</a>
+<div class="weui_cell" v-else>
+  <cell-header><slot name="header"></slot></cell-header>
+  <cell-body><slot name="body"></slot></cell-body>
+  <cell-footer><slot name="footer"></slot></cell-footer>
+</div>
+</template>
+
+<script>
+import CellHeader from './cell-header.vue';
+import CellBody from './cell-body.vue';
+import CellFooter from './cell-footer.vue';
+
+export default {
+  props: {
+    /**
+     * 跳转链接，若设置则此列表项可点击跳转
+     */
+    link: {
+      type: String,
+      required: false
+    },
+
+    /**
+     * vue-router使用的跳转链接
+     * 若使用vue-router，推荐使用router-link而非link
+     */
+    routerLink: {
+      type: null,
+      required: false
+    }
+  },
+
+  components: {
+    CellHeader,
+    CellBody,
+    CellFooter
+  }
+};
+</script>
