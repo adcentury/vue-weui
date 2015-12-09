@@ -24,7 +24,7 @@ vue-weui中组件与css完全解绑，既给予了开发者极大地自主性和
 
 推荐使用微信CDN（微信浏览器内置）
 
-```
+```html
 <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/0.2.2/weui.css"/>
 ```
 
@@ -42,7 +42,7 @@ npm install vue-weui --save
 
 一共有三种引用vue-weui的方案：
 
-```
+```javascript
 // 引用所有组件
 import * as VueWeui from 'vue-weui';
 
