@@ -6,14 +6,21 @@
 
 * 使用Vue封装了WeUI的所有组件
 * 通过npm安装，可以一次引入所有组件，也可选择只引入需要的组件
-* 不带一行css，与WeUI样式完全解绑，可以方便地自定义和使用微信内置缓存
+* 不带一行css，与WeUI样式完全解绑，可以方便地自定义和使用微信内置文件
+
+## 预览
+
+![qr-of-examples](./docs/images/qr-of-examples.png)
+
+扫描二维码在手机查看
+
+或直接访问 [http://adcentury.github.io/vue-weui](http://adcentury.github.io/vue-weui)
 
 ## 安装
 
 ### 安装WeUI
 
-由于weui的css文件会在微信浏览器内置，所以最好的方案是组件与css完全解绑。  
-这样即给予了开发者极大地自主性和灵活性，也能最大限度减少用户下载量。
+vue-weui中组件与css完全解绑，既给予了开发者极大地自主性和灵活性，也能最大限度减少文件大小。
 
 推荐使用微信CDN（微信浏览器内置）
 
@@ -26,12 +33,14 @@
 ### 安装vue-weui
 
 ```
-npm install vue-weui
+npm install vue-weui --save
 ```
 
 ## 使用
 
 ### 引用
+
+一共有三种引用vue-weui的方案：
 
 ```
 // 引用所有组件
@@ -52,11 +61,21 @@ export default {
     'weui-button': Button
   }
 };
+
+// 只引用需要的文件，减少文件大小
+import Dialog from 'vue-weui/components/dialog/dialog.vue';
+
+export default {
+  components: {
+    Dialog
+  }
+};
+
 ```
 
 ### 组件列表和使用说明
 
-完整组件列表请查看
+[点击查看](./docs/components.md)
 
 ## 查看示例
 
