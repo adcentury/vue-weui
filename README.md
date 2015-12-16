@@ -18,17 +18,24 @@
 
 ## 安装
 
-### 安装WeUI
+### 安装weui
 
-vue-weui中组件与css完全解绑，既给予了开发者自主性和灵活性，也能最大限度减少文件大小。
+vue-weui中组件与css完全解绑，既给予了开发者自主性和灵活性，也能最大限度减少文件大小。安装css方法如下：
 
-推荐使用微信CDN（微信浏览器内置）
-
-```html
-<link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/0.2.2/weui.css"/>
+```
+npm install --save weui
 ```
 
-也可使用[其他方案](https://github.com/weui/weui#方法一)
+之后，只需在页面中引入`dist/style/weui.css`或者`dist/style/weui.min.css`其中之一即可. 例如:
+
+```html
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+  <title>Vue WeUI</title>
+  <link rel="stylesheet" href="path/to/weui/dist/style/weui.min.css"/>
+</head>
+```
 
 ### 安装vue-weui
 
