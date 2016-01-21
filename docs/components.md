@@ -379,7 +379,6 @@ type: {
 
 /**
  * 输入框的id
- * @type {Object}
  */
 id: {
   type: String,
@@ -421,7 +420,6 @@ value: {
 
 /**
  * 验证码的url，若设置则验证码会显示在最后
- * @type {Object}
  */
 vcode: {
   type: String,
@@ -436,6 +434,14 @@ warn: {
   type: Boolean,
   required: false,
   default: false
+},
+
+/**
+ * type为textarea时的行数
+ */
+rows: {
+  type: Number,
+  default: 3,
 }
 ```
 
@@ -454,7 +460,6 @@ options: {
 
 /**
  * 选中项数据绑定，会用于select的v-model
- * @type {Object}
  */
 selected: {
   type: null,

@@ -4,7 +4,7 @@
     <label :for="id" class="weui_label">{{{label}}}</label>
   </cell-header>
   <cell-body>
-    <cell-textarea :type="type" :placeholder="placeholder" :id="id" :name="name" :value.sync="value" v-if="type === 'textarea'"></cell-textarea>
+    <cell-textarea :type="type" :placeholder="placeholder" :id="id" :name="name" :rows="rows" :value.sync="value" v-if="type === 'textarea'"></cell-textarea>
     <cell-input :type="type" :placeholder="placeholder" :id="id" :name="name" :value.sync="value" v-else></cell-input>
   </cell-body>
   <cell-footer v-if="vcode || warn">
@@ -36,7 +36,6 @@ export default {
 
     /**
      * 输入框的id
-     * @type {Object}
      */
     id: {
       type: String,
@@ -78,7 +77,6 @@ export default {
 
     /**
      * 验证码的url，若设置则验证码会显示在最后
-     * @type {Object}
      */
     vcode: {
       type: String,
@@ -93,6 +91,14 @@ export default {
       type: Boolean,
       required: false,
       default: false
+    },
+
+    /**
+     * type为textarea时的行数
+     */
+    rows: {
+      type: Number,
+      default: 3,
     }
   },
 

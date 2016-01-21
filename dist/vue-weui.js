@@ -1078,7 +1078,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    /**
 	     * 输入框的id
-	     * @type {Object}
 	     */
 	    id: {
 	      type: String,
@@ -1120,7 +1119,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    /**
 	     * 验证码的url，若设置则验证码会显示在最后
-	     * @type {Object}
 	     */
 	    vcode: {
 	      type: String,
@@ -1135,6 +1133,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      type: Boolean,
 	      required: false,
 	      default: false
+	    },
+	
+	    /**
+	     * type为textarea时的行数
+	     */
+	    rows: {
+	      type: Number,
+	      default: 3
 	    }
 	  },
 	
@@ -1159,7 +1165,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	//   <cell-body>
 
-	//     <cell-textarea :type="type" :placeholder="placeholder" :id="id" :name="name" :value.sync="value" v-if="type === 'textarea'"></cell-textarea>
+	//     <cell-textarea :type="type" :placeholder="placeholder" :id="id" :name="name" :rows="rows" :value.sync="value" v-if="type === 'textarea'"></cell-textarea>
 
 	//     <cell-input :type="type" :placeholder="placeholder" :id="id" :name="name" :value.sync="value" v-else></cell-input>
 
@@ -1271,7 +1277,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	// <template>
 	
-	// <textarea class="weui_input" v-model="value"></textarea>
+	// <textarea class="weui_textarea" v-model="value"></textarea>
 	
 	// </template>
 	
@@ -1291,13 +1297,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 63 */
 /***/ function(module, exports) {
 
-	module.exports = "<textarea class=\"weui_input\" v-model=\"value\"></textarea>";
+	module.exports = "<textarea class=\"weui_textarea\" v-model=\"value\"></textarea>";
 
 /***/ },
 /* 64 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"weui_cell\" :class=\"{'weui_vcode': vcode, 'weui_cell_warn': warn}\">\r\n  <cell-header v-if=\"label\">\r\n    <label :for=\"id\" class=\"weui_label\">{{{label}}}</label>\r\n  </cell-header>\r\n  <cell-body>\r\n    <cell-textarea :type=\"type\" :placeholder=\"placeholder\" :id=\"id\" :name=\"name\" :value.sync=\"value\" v-if=\"type === 'textarea'\"></cell-textarea>\r\n    <cell-input :type=\"type\" :placeholder=\"placeholder\" :id=\"id\" :name=\"name\" :value.sync=\"value\" v-else></cell-input>\r\n  </cell-body>\r\n  <cell-footer v-if=\"vcode || warn\">\r\n    <i class=\"weui_icon_warn\" v-if=\"warn\"></i>\r\n    <img :src=\"vcode\" v-if=\"vcode\">\r\n  </cell-footer>\r\n</div>";
+	module.exports = "<div class=\"weui_cell\" :class=\"{'weui_vcode': vcode, 'weui_cell_warn': warn}\">\r\n  <cell-header v-if=\"label\">\r\n    <label :for=\"id\" class=\"weui_label\">{{{label}}}</label>\r\n  </cell-header>\r\n  <cell-body>\r\n    <cell-textarea :type=\"type\" :placeholder=\"placeholder\" :id=\"id\" :name=\"name\" :rows=\"rows\" :value.sync=\"value\" v-if=\"type === 'textarea'\"></cell-textarea>\r\n    <cell-input :type=\"type\" :placeholder=\"placeholder\" :id=\"id\" :name=\"name\" :value.sync=\"value\" v-else></cell-input>\r\n  </cell-body>\r\n  <cell-footer v-if=\"vcode || warn\">\r\n    <i class=\"weui_icon_warn\" v-if=\"warn\"></i>\r\n    <img :src=\"vcode\" v-if=\"vcode\">\r\n  </cell-footer>\r\n</div>";
 
 /***/ },
 /* 65 */
