@@ -36,7 +36,6 @@ export default {
 
     /**
      * 输入框的id
-     * @type {Object}
      */
     id: {
       type: String,
@@ -78,7 +77,6 @@ export default {
 
     /**
      * 验证码的url，若设置则验证码会显示在最后
-     * @type {Object}
      */
     vcode: {
       type: String,
@@ -96,7 +94,7 @@ export default {
     },
 
     /**
-     * textarea 的行数
+     * type为textarea时的行数
      */
     rows: {
       type: Number,
