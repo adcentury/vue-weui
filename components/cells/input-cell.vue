@@ -4,7 +4,7 @@
     <label :for="id" class="weui_label">{{{label}}}</label>
   </cell-header>
   <cell-body>
-    <cell-textarea :type="type" :placeholder="placeholder" :id="id" :name="name" :value.sync="value" v-if="type === 'textarea'"></cell-textarea>
+    <cell-textarea :type="type" :placeholder="placeholder" :id="id" :name="name" :rows="rows" :value.sync="value" v-if="type === 'textarea'"></cell-textarea>
     <cell-input :type="type" :placeholder="placeholder" :id="id" :name="name" :value.sync="value" v-else></cell-input>
   </cell-body>
   <cell-footer v-if="vcode || warn">
@@ -93,6 +93,14 @@ export default {
       type: Boolean,
       required: false,
       default: false
+    },
+
+    /**
+     * textarea 的行数
+     */
+    rows: {
+      type: Number,
+      default: 3,
     }
   },
 
