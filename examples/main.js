@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import 'weui/dist/style/weui.css';
 import './example.css';
 import {App, Button, Cell, Toast, Dialog, Progress, Message, Article, Actionsheet, Icons} from './containers';
 
