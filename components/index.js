@@ -33,6 +33,9 @@ import Actionsheet from './actionsheet/actionsheet.vue';
 
 import Icon from './icon/icon.vue';
 
+import Grids from './grids/grids.vue';
+import Grid from './grids/grid.vue';
+
 const VueWeui = {
   ButtonArea,
   Button,
@@ -57,7 +60,9 @@ const VueWeui = {
   Message,
   Article,
   Actionsheet,
-  Icon
+  Icon,
+  Grids,
+  Grid
 };
 
 module.exports = VueWeui;

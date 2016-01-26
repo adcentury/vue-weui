@@ -5,18 +5,15 @@
     <p class="page_desc">使用Vue封装，为微信Web服务量身设计</p>
   </div>
   <div class="bd">
-    <cells type="access" class="global_navs">
-      <cell v-for="item in list" :router-link="{path: '/' + item.url}">
-        <img slot="header" :src="item.image" class="icon_nav">
-        <p slot="body">{{item.text}}</p>
-      </cell>
-    </cells>
+    <grids>
+      <grid v-for="item in list" :router-link="{path: '/' + item.url}" :image-url="item.image" :label="item.text"></grid>
+    </grids>
   </div>
 </div>
 </template>
 
 <script>
-import {Cells, Cell} from 'vue-weui';
+import {Grids, Grid} from 'vue-weui';
 import icon_nav_button from '../images/icon_nav_button.png';
 import icon_nav_cell from '../images/icon_nav_cell.png';
 import icon_nav_toast from '../images/icon_nav_toast.png';
@@ -70,8 +67,8 @@ export default {
   },
 
   components: {
-    Cells,
-    Cell
+    Grids,
+    Grid
   }
 }
 </script>

@@ -31,6 +31,9 @@
     * [Actionsheet](#actionsheet)
 * [9. 图标相关](#9-图标相关)
     * [Icon](#icon)
+* [10. 网格相关](#10-网格相关)
+    * [Grids](#grids)
+    * [Grid](#grid)
 
 <!-- toc stop -->
 
@@ -805,5 +808,53 @@ type: {
   type: String,
   required: false,
   default: 'default'
+}
+```
+
+### 10. 网格相关
+
+#### Grids
+
+网格容器，内部包含Grid
+
+#### Grid
+
+一个格子
+
+* pros
+
+```javascript
+/**
+ * 跳转链接，会添加在标签的href属性中
+ */
+link: {
+  type: String,
+  required: false
+},
+
+/**
+ * vue-router使用的跳转链接
+ * 若使用vue-router，推荐使用router-link而非link
+ * 会添加在v-link属性中
+ */
+routerLink: {
+  type: null,
+  required: false
+},
+
+/**
+ * 图标地址
+ */
+imageUrl: {
+  type: String,
+  required: false
+},
+
+/**
+ * 标签，显示在图标下方
+ */
+label: {
+  type: null,
+  required: false
 }
 ```
