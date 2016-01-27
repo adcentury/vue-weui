@@ -88,7 +88,7 @@
     </button-area>
     <cells-title>文本域</cells-title>
     <cells type="form">
-      <input-cell type="textarea" placeholder="请输入评论" :value.sync="commentsValue"></input-cell>
+      <input-cell type="textarea" placeholder="请输入评论" :maxlength="200" :value.sync="commentsValue"></input-cell>
     </cells>
     <toptips v-show="toptipsCount > 0">错误提醒&nbsp;{{toptipsCount}}秒后消失</toptips>
     <cells-title>表单报错</cells-title>
