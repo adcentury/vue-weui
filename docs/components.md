@@ -822,6 +822,22 @@ type: {
 
 ### 10. 网格相关
 
+常用的网格结构如下（一行三格）：
+
+```javascript
+<grids>
+  <!-- 一个格子 -->
+  <grid link="some-link" label="some-text" imageUrl="url-of-icon"></grid>
+  <!-- 另一个格子 -->
+  <grid link="some-link" label="some-text" imageUrl="url-of-icon"></grid>
+  <!-- 第三个格子 -->
+  <grid link="some-link" label="some-text" imageUrl="url-of-icon"></grid>
+  <!-- 因为一行三格，所以第四个格子会显示在第二行 -->
+  <grid link="some-link" label="some-text" imageUrl="url-of-icon"></grid>
+  <!-- 更多的格子…… -->
+</grids>
+```
+
 #### Grids
 
 网格容器，内部包含Grid
@@ -830,7 +846,7 @@ type: {
 
 一个格子
 
-* pros
+* props
 
 ```javascript
 /**
