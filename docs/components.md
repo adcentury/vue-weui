@@ -824,7 +824,7 @@ type: {
 
 常用的网格结构如下（一行三格）：
 
-```javascript
+```html
 <grids>
   <!-- 一个格子 -->
   <grid link="some-link" label="some-text" imageUrl="url-of-icon"></grid>
