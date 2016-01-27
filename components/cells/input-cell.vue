@@ -4,8 +4,9 @@
     <label :for="id" class="weui_label">{{{label}}}</label>
   </cell-header>
   <cell-body>
-    <cell-textarea :type="type" :placeholder="placeholder" :id="id" :name="name" :rows="rows" :value.sync="value" v-if="type === 'textarea'"></cell-textarea>
-    <cell-input :type="type" :placeholder="placeholder" :id="id" :name="name" :value.sync="value" v-else></cell-input>
+    <cell-textarea :type="type" :placeholder="placeholder" :id="id" :name="name" :rows="rows" :maxlength="maxlength" :value.sync="value" v-if="type === 'textarea'"></cell-textarea>
+    <cell-input :type="type" :placeholder="placeholder" :id="id" :name="name" :maxlength="maxlength" :value.sync="value" v-else></cell-input>
+    <div class="weui_textarea_counter" v-if="type === 'textarea' && maxlength"><span>{{value.length}}/{{maxlength}}</span></div>
   </cell-body>
   <cell-footer v-if="vcode || warn">
     <i class="weui_icon_warn" v-if="warn"></i>
@@ -99,6 +100,15 @@ export default {
     rows: {
       type: Number,
       default: 3,
+    },
+
+    /**
+     * 支持的最大输入长度
+     * 若type为textarea且设定了maxlength，则会出现字数统计标签
+     */
+    maxlength: {
+      type: Number,
+      required: false
     }
   },
 

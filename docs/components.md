@@ -445,6 +445,15 @@ warn: {
 rows: {
   type: Number,
   default: 3,
+},
+
+/**
+ * 支持的最大输入长度
+ * 若type为textarea且设定了maxlength，则会出现字数统计标签
+ */
+maxlength: {
+  type: Number,
+  required: false
 }
 ```
 
