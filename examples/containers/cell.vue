@@ -26,38 +26,38 @@
     </cells>
     <cells-title>带跳转的列表项</cells-title>
     <cells type="access">
-      <cell link="javascript:;">
+      <link-cell link="javascript:;">
         <span slot="body">cell standard</span>
         <span slot="footer"></span>
-      </cell>
-      <cell link="javascript:;">
+      </link-cell>
+      <link-cell link="javascript:;">
         <span slot="body">cell standard</span>
         <span slot="footer"></span>
-      </cell>
+      </link-cell>
     </cells>
     <cells-title>带说明、跳转的列表项</cells-title>
     <cells type="access">
-      <cell link="javascript:;">
+      <link-cell link="javascript:;">
         <span slot="body">cell standard</span>
         <span slot="footer">说明文字</span>
-      </cell>
-      <cell link="javascript:;">
+      </link-cell>
+      <link-cell link="javascript:;">
         <span slot="body">cell standard</span>
         <span slot="footer">说明文字</span>
-      </cell>
+      </link-cell>
     </cells>
     <cells-title>带图标、说明、跳转的列表项</cells-title>
     <cells type="access">
-      <cell link="javascript:;">
+      <link-cell link="javascript:;">
         <img slot="header" :src="sampleImage" alt="" style="width:20px;margin-right:5px;display:block">
         <span slot="body">cell standard</span>
         <span slot="footer">说明文字</span>
-      </cell>
-      <cell link="javascript:;">
+      </link-cell>
+      <link-cell link="javascript:;">
         <img slot="header" :src="sampleImage" alt="" style="width:20px;margin-right:5px;display:block">
         <span slot="body">cell standard</span>
         <span slot="footer">说明文字</span>
-      </cell>
+      </link-cell>
     </cells>
     <cells-title>单选列表项</cells-title>
     <cells type="radio">
@@ -86,6 +86,25 @@
     <button-area>
       <weui-button type="primary">确定</weui-button>
     </button-area>
+    <cells-title>上传</cells-title>
+    <cells type="form">
+      <cell>
+        <uploader slot="body" :count="3" :maxlength="5">
+          <span slot="title">图片标题</span>
+          <uploader-files slot="uploader-files">
+            <uploader-file image-url="http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/"></uploader-file>
+            <uploader-file image-url="http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/"></uploader-file>
+            <uploader-file image-url="http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/"></uploader-file>
+            <uploader-file image-url="http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/" has-status>
+              <icon slot="status" name="warn"></icon>
+            </uploader-file>
+            <uploader-file image-url="http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/" has-status>
+              <span slot="status">50%</span>
+            </uploader-file>
+          </uploader-files>
+        </uploader>
+      </cell>
+    </cells>
     <cells-title>文本域</cells-title>
     <cells type="form">
       <input-cell type="textarea" placeholder="请输入评论" :maxlength="200" :value.sync="commentsValue"></input-cell>
@@ -117,9 +136,11 @@
 <script>
 import {ButtonArea, Button,
   CellsTitle, CellsTips,
-  Cells, Cell, RadioCell, CheckboxCell, SwitchCell, InputCell, SelectCell,
+  Cells, Cell, LinkCell, RadioCell, CheckboxCell, SwitchCell, InputCell, SelectCell,
   CellInput,
-  Toptips} from 'vue-weui';
+  Uploader, UploaderFiles, UploaderFile,
+  Toptips,
+  Icon} from 'vue-weui';
 
 const sampleImage = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=';
 
@@ -159,13 +180,18 @@ export default {
     CellsTips,
     Cells,
     Cell,
+    LinkCell,
     RadioCell,
     CheckboxCell,
     SwitchCell,
     InputCell,
     SelectCell,
     CellInput,
-    Toptips
+    Uploader,
+    UploaderFiles,
+    UploaderFile,
+    Toptips,
+    Icon
   },
 
   ready() {
