@@ -7,7 +7,7 @@
   <div class="weui_uploader_bd">
     <slot name="uploader-files"></slot>
     <div class="weui_uploader_input_wrp" v-if="hasInput">
-      <input type="file" class="weui_uploader_input" accept="image/jpg,image/jpeg,image/png,image/gif" multiple>
+      <input type="file" class="weui_uploader_input" accept="image/jpg,image/jpeg,image/png,image/gif" multiple @change="dispatchChange">
     </div>
   </div>
 </div>
@@ -38,6 +38,12 @@ export default {
       type: Boolean,
       required: false,
       default: true
+    }
+  },
+
+  methods: {
+    dispatchChange(event) {
+      this.$dispatch('input-change', event);
     }
   },
 

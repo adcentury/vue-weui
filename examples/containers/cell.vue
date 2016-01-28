@@ -89,7 +89,7 @@
     <cells-title>上传</cells-title>
     <cells type="form">
       <cell>
-        <uploader slot="body" :count="3" :maxlength="5">
+        <uploader slot="body" :count="3" :maxlength="5" @input-change="handleFileInputChange">
           <span slot="title">图片标题</span>
           <uploader-files slot="uploader-files">
             <uploader-file image-url="http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/"></uploader-file>
@@ -130,6 +130,10 @@
       </select-cell>
     </cells>
   </div>
+  <dialog v-show="alertShow" type="alert" title="提示"
+    @weui-dialog-confirm="hideAlert">
+    {{alertText}}
+  </dialog>
 </div>
 </template>
 
@@ -140,7 +144,8 @@ import {ButtonArea, Button,
   CellInput,
   Uploader, UploaderFiles, UploaderFile,
   Toptips,
-  Icon} from 'vue-weui';
+  Icon,
+  Dialog} from 'vue-weui';
 
 const sampleImage = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=';
 
@@ -169,7 +174,27 @@ export default {
       contactTypeOptions: ['微信号', 'QQ号', 'Email'],
       contactTypeSelected: '微信号',
       nationOptions: ['中国', '美国', '英国'],
-      nationSelected: '中国'
+      nationSelected: '中国',
+      alertText: '',
+      alertShow: false
+    }
+  },
+
+  methods: {
+    handleFileInputChange(event) {
+      const {files} = event.target;
+      if (files.length > 0) {
+        this.showAlert(`你选择了${files[0].name}`);
+      }
+    },
+
+    showAlert(message) {
+      this.alertText = message;
+      this.alertShow = true;
+    },
+
+    hideAlert() {
+      this.alertShow = false;
     }
   },
 
@@ -191,7 +216,8 @@ export default {
     UploaderFiles,
     UploaderFile,
     Toptips,
-    Icon
+    Icon,
+    Dialog
   },
 
   ready() {
