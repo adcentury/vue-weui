@@ -11,6 +11,7 @@
     * [CellsTips](#cellstips)
     * [Cells](#cells)
     * [Cell](#cell)
+    * [LinkCell](#linkcell)
     * [RadioCell](#radiocell)
     * [CheckboxCell](#checkboxcell)
     * [SwitchCell](#switchcell)
@@ -118,6 +119,10 @@ plain: {
 </cells>
 
 <!-- 其它种类的列表项 -->
+<cells type="access">
+  <link-cell></link-cell>
+</cells>
+
 <cells type="radio">
   <radio-cell></radio-cell>
   ...
@@ -179,11 +184,24 @@ type: {
 
 一个列表项
 
+* slots
+    * `<slot name="header">`: 列表项头部
+    * `<slot name="body">`: 列表项主内容区
+    * `<slot name="footer">`: 列表项尾部
+
+* 补充说明
+
+    Cell一般用于普通的文本、图标项，若为表单列表项，需使用对应的RadioCell，CheckboxCell，SwitchCell，InputCell或SelectCell
+
+#### LinkCell
+
+链接列表项，标签为`<a>`
+
 * props
 
 ```javascript
 /**
- * 跳转链接，若设置，则此列表项会变为链接
+ * 跳转链接，若设置则此列表项可点击跳转
  */
 link: {
   type: String,
@@ -199,16 +217,6 @@ routerLink: {
   required: false
 }
 ```
-
-* slots
-
-    * `<slot name="header">`: 列表项头部
-    * `<slot name="body">`: 列表项主内容区
-    * `<slot name="footer">`: 列表项尾部
-
-* 补充说明
-
-Cell一般用于普通的文本、图标或链接列表项，若为表单列表项，需使用对应的RadioCell，CheckboxCell，SwitchCell，InputCell或SelectCell
 
 #### RadioCell
 
