@@ -89,8 +89,8 @@
     <cells-title>上传</cells-title>
     <cells type="form">
       <cell>
-        <uploader slot="body" :count="3" :maxlength="5" @input-change="handleFileInputChange">
-          <span slot="title">图片标题</span>
+        <uploader slot="body" :count="3" :maxlength="5" @weui-input-change="handleFileInputChange">
+          <span slot="title">图片上传</span>
           <uploader-files slot="uploader-files">
             <uploader-file image-url="http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/"></uploader-file>
             <uploader-file image-url="http://shp.qpic.cn/weixinsrc_pic/pScBR7sbqjOBJomcuvVJ6iacVrbMJaoJZkFUIq4nzQZUIqzTKziam7ibg/"></uploader-file>

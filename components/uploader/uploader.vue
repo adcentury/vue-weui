@@ -18,6 +18,10 @@ import Cell from '../cells/cell.vue';
 
 export default {
   props: {
+    /**
+     * 已上传文件数量
+     * 注意，Uploader并不会对真实文件数量进行控制，count仅用于显示
+     */
     count: {
       type: Number,
       required: false,
@@ -26,6 +30,10 @@ export default {
       }
     },
 
+    /**
+     * 显示的最大可上传数量
+     * 注意，Uploader并不会对真实文件数量进行控制，maxlength仅用于显示
+     */
     maxlength: {
       type: Number,
       required: false,
@@ -34,6 +42,9 @@ export default {
       }
     },
 
+    /**
+     * 是否包含input元素
+     */
     hasInput: {
       type: Boolean,
       required: false,
@@ -43,7 +54,7 @@ export default {
 
   methods: {
     dispatchChange(event) {
-      this.$dispatch('input-change', event);
+      this.$dispatch('weui-input-change', event);
     }
   },
 
