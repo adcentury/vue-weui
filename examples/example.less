@@ -5,16 +5,12 @@ body {
 }
 
 .slide-transition {
-  transition: left 0.3s ease;
+  transition: transform 0.3s ease;
   width: 100%;
 }
 
 .slide-enter, .slide-leave {
-  left: 100%;
-}
-
-.slide-leave {
-  left: 100%;
+  transform: translateX(100%);
 }
 
 .app-transition {
