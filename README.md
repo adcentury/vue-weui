@@ -87,7 +87,7 @@ new Vue({
 
 ### 组件列表和使用说明
 
-[点击查看](./docs/components.md)
+[点击查看组件列表](./docs/components.md)
 
 ## 查看示例
 
@@ -98,6 +98,10 @@ npm start
 
 open http://localhost:8080 in browser
 ```
+
+## 变更日志
+
+[点击查看变更日志](./docs/CHANGELOG.md)
 
 ## 反馈
 
