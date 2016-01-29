@@ -1,6 +1,6 @@
 {
   "name": "vue-weui",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "WeUI components with love of Vue.js",
   "main": "dist/vue-weui.js",
   "repository": {
@@ -8,8 +8,7 @@
     "url": "adcentury/vue-weui"
   },
   "dependencies": {
-    "vue": "^1.0.8",
-    "weui": "github:weui/weui"
+    "vue": "^1.0.8"
   },
   "files": [
     "LICENCE",
@@ -48,7 +47,8 @@
     "vue-router": "^0.7.6",
     "webpack": "^1.12.2",
     "webpack-dev-middleware": "^1.2.0",
-    "webpack-hot-middleware": "^2.5.0"
+    "webpack-hot-middleware": "^2.5.0",
+    "weui": "github:weui/weui"
   },
   "scripts": {
     "clean": "rimraf dist",
