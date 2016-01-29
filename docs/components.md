@@ -11,6 +11,7 @@
     * [CellsTips](#cellstips)
     * [Cells](#cells)
     * [Cell](#cell)
+    * [LinkCell](#linkcell)
     * [RadioCell](#radiocell)
     * [CheckboxCell](#checkboxcell)
     * [SwitchCell](#switchcell)
@@ -31,6 +32,13 @@
     * [Actionsheet](#actionsheet)
 * [9. 图标相关](#9-图标相关)
     * [Icon](#icon)
+* [10. 九宫格](#10-九宫格)
+    * [Grids](#grids)
+    * [Grid](#grid)
+* [11. 图片上传](#11-图片上传)
+    * [Uploader](#uploader)
+    * [UploaderFiles](#uploaderfiles)
+    * [UploaderFile](#uploaderfile)
 
 <!-- toc stop -->
 
@@ -111,6 +119,10 @@ plain: {
 </cells>
 
 <!-- 其它种类的列表项 -->
+<cells type="access">
+  <link-cell></link-cell>
+</cells>
+
 <cells type="radio">
   <radio-cell></radio-cell>
   ...
@@ -172,11 +184,24 @@ type: {
 
 一个列表项
 
+* slots
+    * `<slot name="header">`: 列表项头部
+    * `<slot name="body">`: 列表项主内容区
+    * `<slot name="footer">`: 列表项尾部
+
+* 补充说明
+
+    Cell一般用于普通的文本、图标项，若为表单列表项，需使用对应的RadioCell，CheckboxCell，SwitchCell，InputCell或SelectCell
+
+#### LinkCell
+
+链接列表项，标签为`<a>`
+
 * props
 
 ```javascript
 /**
- * 跳转链接，若设置，则此列表项会变为链接
+ * 跳转链接，若设置则此列表项可点击跳转
  */
 link: {
   type: String,
@@ -192,16 +217,6 @@ routerLink: {
   required: false
 }
 ```
-
-* slots
-
-    * `<slot name="header">`: 列表项头部
-    * `<slot name="body">`: 列表项主内容区
-    * `<slot name="footer">`: 列表项尾部
-
-* 补充说明
-
-Cell一般用于普通的文本、图标或链接列表项，若为表单列表项，需使用对应的RadioCell，CheckboxCell，SwitchCell，InputCell或SelectCell
 
 #### RadioCell
 
@@ -442,6 +457,15 @@ warn: {
 rows: {
   type: Number,
   default: 3,
+},
+
+/**
+ * 支持的最大输入长度
+ * 若type为textarea且设定了maxlength，则会出现字数统计标签
+ */
+maxlength: {
+  type: Number,
+  required: false
 }
 ```
 
@@ -807,3 +831,170 @@ type: {
   default: 'default'
 }
 ```
+
+### 10. 九宫格
+
+常用的九宫格结构如下（一行三格）：
+
+```html
+<grids>
+  <!-- 一个格子 -->
+  <grid link="some-link" label="some-text" imageUrl="url-of-icon"></grid>
+  <!-- 另一个格子 -->
+  <grid link="some-link" label="some-text" imageUrl="url-of-icon"></grid>
+  <!-- 第三个格子 -->
+  <grid link="some-link" label="some-text" imageUrl="url-of-icon"></grid>
+  <!-- 因为一行三格，所以第四个格子会显示在第二行 -->
+  <grid link="some-link" label="some-text" imageUrl="url-of-icon"></grid>
+  <!-- 更多的格子…… -->
+</grids>
+```
+
+#### Grids
+
+九宫格容器，内部包含Grid
+
+#### Grid
+
+一个格子
+
+* props
+
+```javascript
+/**
+ * 跳转链接，会添加在标签的href属性中
+ */
+link: {
+  type: String,
+  required: false
+},
+
+/**
+ * vue-router使用的跳转链接
+ * 若使用vue-router，推荐使用router-link而非link
+ * 会添加在v-link属性中
+ */
+routerLink: {
+  type: null,
+  required: false
+},
+
+/**
+ * 图标地址
+ */
+imageUrl: {
+  type: String,
+  required: false
+},
+
+/**
+ * 标签，显示在图标下方
+ */
+label: {
+  type: null,
+  required: false
+}
+```
+
+### 11. 图片上传
+
+图片上传包含三个组件`Uploader`, `UploaderFiles`和`UploaderFile`。其中，`Uploader`是整个上传容器，包含`input`元素。若无需预览，可以只用`Uploader`；若需要图片预览，则通过slot添加`UploaderFiles`容器，容器中包含的每一个`UploaderFile`为一个预览元素，常用结构如下：
+
+```html
+<uploader :count="3" :maxlength="5" @weui-input-change="handleFileInputChange">
+  <!-- Uploader的标题slot -->
+  <span slot="title">图片上传</span>
+  <!-- 需要预览时，增加UploaderFiles容器 -->
+  <uploader-files slot="uploader-files">
+    <uploader-file image-url="..."></uploader-file>
+    <!-- 预览图片可以包含status -->
+    <uploader-file image-url="..." has-status>
+      <icon slot="status" name="warn"></icon>
+    </uploader-file>
+    <uploader-file image-url="..." has-status>
+      <span slot="status">50%</span>
+    </uploader-file>
+  </uploader-files>
+</uploader>
+```
+
+#### Uploader
+
+上传容器
+
+* props
+
+```javascript
+/**
+ * 已上传文件数量
+ * 注意，Uploader并不会对真实文件数量进行控制，count仅用于显示
+ */
+count: {
+  type: Number,
+  required: false,
+  validator: function(value) {
+    return value >= 0;
+  }
+},
+
+/**
+ * 显示的最大可上传数量
+ * 注意，Uploader并不会对真实文件数量进行控制，maxlength仅用于显示
+ */
+maxlength: {
+  type: Number,
+  required: false,
+  validator: function(value) {
+    return value > 0;
+  }
+},
+
+/**
+ * 是否包含input元素
+ */
+hasInput: {
+  type: Boolean,
+  required: false,
+  default: true
+}
+```
+
+* slots
+    * `<slot name="title">`: 文件上传容器的标题区
+    * `<slot name="uploader-files">`: 上传文件预览区，一般将`UploaderFiles`作为此slot的内容
+
+* events
+    * `weui-input-change(event)`: `Uploader`内部的`input`元素`change`事件
+
+#### UploaderFiles
+
+文件预览容器，一般用于`Uploader`的slot，`UploaderFile`应该被包含在此容器内
+
+#### UploaderFile
+
+一个文件预览元素
+
+* props
+
+```javascript
+/**
+ * 预览图的url，将被用于backgroud-image中
+ */
+imageUrl: {
+  type: String,
+  required: true
+},
+
+/**
+ * 是否包含status
+ * 若包含，则预览图片上会添加黑色蒙层
+ */
+hasStatus: {
+  type: Boolean,
+  required: false,
+  default: false
+}
+```
+
+* slots
+    * `<slot name="status">`: status区。注意：要显示此slot必须将`hasStatus`置为true
