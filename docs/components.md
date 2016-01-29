@@ -34,6 +34,10 @@
 * [10. 九宫格](#10-九宫格)
     * [Grids](#grids)
     * [Grid](#grid)
+* [11. 图片上传](#11-图片上传)
+    * [Uploader](#uploader)
+    * [UploaderFiles](#uploaderfiles)
+    * [UploaderFile](#uploaderfile)
 
 <!-- toc stop -->
 
@@ -883,3 +887,106 @@ label: {
   required: false
 }
 ```
+
+### 11. 图片上传
+
+图片上传包含三个组件`Uploader`, `UploaderFiles`和`UploaderFile`。其中，`Uploader`是整个上传容器，包含`input`元素。若无需预览，可以只用`Uploader`；若需要图片预览，则通过slot添加`UploaderFiles`容器，容器中包含的每一个`UploaderFile`为一个预览元素，常用结构如下：
+
+```html
+<uploader :count="3" :maxlength="5" @weui-input-change="handleFileInputChange">
+  <!-- Uploader的标题slot -->
+  <span slot="title">图片上传</span>
+  <!-- 需要预览时，增加UploaderFiles容器 -->
+  <uploader-files slot="uploader-files">
+    <uploader-file image-url="..."></uploader-file>
+    <!-- 预览图片可以包含status -->
+    <uploader-file image-url="..." has-status>
+      <icon slot="status" name="warn"></icon>
+    </uploader-file>
+    <uploader-file image-url="..." has-status>
+      <span slot="status">50%</span>
+    </uploader-file>
+  </uploader-files>
+</uploader>
+```
+
+#### Uploader
+
+上传容器
+
+* props
+
+```javascript
+/**
+ * 已上传文件数量
+ * 注意，Uploader并不会对真实文件数量进行控制，count仅用于显示
+ */
+count: {
+  type: Number,
+  required: false,
+  validator: function(value) {
+    return value >= 0;
+  }
+},
+
+/**
+ * 显示的最大可上传数量
+ * 注意，Uploader并不会对真实文件数量进行控制，maxlength仅用于显示
+ */
+maxlength: {
+  type: Number,
+  required: false,
+  validator: function(value) {
+    return value > 0;
+  }
+},
+
+/**
+ * 是否包含input元素
+ */
+hasInput: {
+  type: Boolean,
+  required: false,
+  default: true
+}
+```
+
+* slots
+    * `<slot name="title">`: 文件上传容器的标题区
+    * `<slot name="uploader-files">`: 上传文件预览区，一般将`UploaderFiles`作为此slot的内容
+
+* events
+    * `weui-input-change(event)`: `Uploader`内部的`input`元素`change`事件
+
+#### UploaderFiles
+
+文件预览容器，一般用于`Uploader`的slot，`UploaderFile`应该被包含在此容器内
+
+#### UploaderFile
+
+一个文件预览元素
+
+* props
+
+```javascript
+/**
+ * 预览图的url，将被用于backgroud-image中
+ */
+imageUrl: {
+  type: String,
+  required: true
+},
+
+/**
+ * 是否包含status
+ * 若包含，则预览图片上会添加黑色蒙层
+ */
+hasStatus: {
+  type: Boolean,
+  required: false,
+  default: false
+}
+```
+
+* slots
+    * `<slot name="status">`: status区。注意：要显示此slot必须将`hasStatus`置为true
