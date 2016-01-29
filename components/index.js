@@ -5,6 +5,7 @@ import CellsTitle from './cells/cells-title.vue';
 import CellsTips from './cells/cells-tips.vue';
 import Cells from './cells/cells.vue';
 import Cell from './cells/cell.vue';
+import LinkCell from './cells/link-cell.vue';
 import RadioCell from './cells/radio-cell.vue';
 import CheckboxCell from './cells/checkbox-cell.vue';
 import SwitchCell from './cells/switch-cell.vue';
@@ -33,6 +34,13 @@ import Actionsheet from './actionsheet/actionsheet.vue';
 
 import Icon from './icon/icon.vue';
 
+import Grids from './grids/grids.vue';
+import Grid from './grids/grid.vue';
+
+import Uploader from './uploader/uploader.vue';
+import UploaderFiles from './uploader/uploader-files.vue';
+import UploaderFile from './uploader/uploader-file.vue';
+
 const VueWeui = {
   ButtonArea,
   Button,
@@ -40,6 +48,7 @@ const VueWeui = {
   CellsTips,
   Cells,
   Cell,
+  LinkCell,
   RadioCell,
   CheckboxCell,
   SwitchCell,
@@ -57,7 +66,12 @@ const VueWeui = {
   Message,
   Article,
   Actionsheet,
-  Icon
+  Icon,
+  Grids,
+  Grid,
+  Uploader,
+  UploaderFiles,
+  UploaderFile
 };
 
 module.exports = VueWeui;
