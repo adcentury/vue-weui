@@ -1,6 +1,6 @@
 # vue-weui 
 
-> 使用Vue封装，为微信Web服务量身设计
+> 使用Vue封装，为微信Web服务量身设计（Work with WeUI 0.3.0）
 
 ## 特点
 
