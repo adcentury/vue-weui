@@ -119,9 +119,8 @@ plain: {
 </cells>
 
 <!-- 其它种类的列表项 -->
-<cells>
-  <link-cell>
-</link-cell>
+<cells type="access">
+  <link-cell></link-cell>
 </cells>
 
 <cells type="radio">
