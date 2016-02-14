@@ -1,6 +1,6 @@
 # vue-weui
 
-[![npm package][npm-badge]][npm] [![dependencies status][dependencies-badge]][dependencies]
+[![npm package][npm-badge]][npm] [![dependencies status][dependencies-badge]][dependencies] [![npm downloads][downloads-badge]][npm]
 
 > 使用Vue封装，为微信Web服务量身设计（Work with WeUI 0.3.0）
 
@@ -109,8 +109,10 @@ open http://localhost:8080 in browser
 
 有任何意见和建议请提交issue或PR，谢谢。
 
-[npm-badge]: https://badge.fury.io/js/vue-weui.svg
+[npm-badge]: https://img.shields.io/npm/v/vue-weui.svg?style=flat-square
 [npm]: https://www.npmjs.com/package/vue-weui
 
 [dependencies-badge]: https://david-dm.org/adcentury/vue-weui.svg
 [dependencies]: https://david-dm.org/adcentury/vue-weui
+
+[downloads-badge]: https://img.shields.io/npm/dm/vue-weui.svg?style=flat-square
