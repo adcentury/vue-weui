@@ -3,7 +3,11 @@ import VueRouter from 'vue-router';
 import fastclick from 'fastclick';
 import 'weui/dist/style/weui.css';
 import './example.less';
-import {App, Button, Cell, Toast, Dialog, Progress, Message, Article, Actionsheet, Icons} from './containers';
+import {App,
+  Button, Cell, Toast,
+  Dialog, Progress, Message,
+  Article, Actionsheet, Icons,
+  Tab, Navbar} from './containers';
 
 
 Vue.config.debug = true;
@@ -41,6 +45,12 @@ router.map({
   },
   '/icons': {
     component: Icons
+  },
+  '/tab': {
+    component: Tab
+  },
+  '/navbar': {
+    component: Navbar
   }
 });
 

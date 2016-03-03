@@ -41,6 +41,10 @@ import Uploader from './uploader/uploader.vue';
 import UploaderFiles from './uploader/uploader-files.vue';
 import UploaderFile from './uploader/uploader-file.vue';
 
+import Tab from './tab/tab.vue';
+import Navbar from './tab/navbar.vue';
+import NavbarItem from './tab/navbar-item.vue';
+
 const VueWeui = {
   ButtonArea,
   Button,
@@ -71,7 +75,10 @@ const VueWeui = {
   Grid,
   Uploader,
   UploaderFiles,
-  UploaderFile
+  UploaderFile,
+  Tab,
+  Navbar,
+  NavbarItem
 };
 
 module.exports = VueWeui;

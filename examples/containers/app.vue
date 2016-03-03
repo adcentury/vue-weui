@@ -22,6 +22,9 @@ import icon_nav_msg from '../images/icon_nav_msg.png';
 import icon_nav_article from '../images/icon_nav_article.png';
 import icon_nav_actionSheet from '../images/icon_nav_actionSheet.png';
 import icon_nav_icons from '../images/icon_nav_icons.png';
+import icon_nav_panel from '../images/icon_nav_panel.png';
+import icon_nav_tab from '../images/icon_nav_tab.png';
+import icon_nav_search_bar from '../images/icon_nav_search_bar.png';
 
 export default {
   data() {
@@ -62,6 +65,18 @@ export default {
         text: 'Icons',
         url: 'icons',
         image: icon_nav_icons
+      }, {
+        text: 'Panel',
+        url: 'panel',
+        image: icon_nav_panel
+      }, {
+        text: 'Tab',
+        url: 'tab',
+        image: icon_nav_tab
+      }, {
+        text: 'SearchBar',
+        url: 'searchbar',
+        image: icon_nav_search_bar
       }]
     };
   },

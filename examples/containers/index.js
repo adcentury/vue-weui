@@ -8,3 +8,5 @@ export Message from './message.vue';
 export Article from './article.vue';
 export Actionsheet from './actionsheet.vue';
 export Icons from './icons.vue';
+export Tab from './tab/tab.vue';
+export Navbar from './tab/navbar.vue';
