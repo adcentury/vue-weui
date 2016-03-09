@@ -1,8 +1,10 @@
 <template>
-<select class="weui_select" v-model="selected">
-  <option v-if="isObj" v-for="option in options" value="option.value">{{option.text}}</option>
-  <option v-else v-for="option in options" value="option">{{option}}</option>
-</select>
+    <select class="weui_select" v-model="selected" v-if="isObj">
+        <option  v-for="option in options" value="option.value">{{option.text}}</option>
+    </select>
+    <select class="weui_select" v-model="selected" v-else>
+        <option  v-for="option in options" value="option" >{{option}}</option>
+    </select>
 </template>
 
 <script>
@@ -30,10 +32,12 @@ export default {
     初始化,检查该数据是否是对象, 对象的内容是 {text:'',value:''}
 */  
   created(){
-      var tempValue=this.options.length>0?this.options[0];
+      var tempValue=this.options.length>0?this.options[0]:"";
       if(typeof tempValue=="object"){
+          console.log("该数组是对象"+ tempValue.text)
           this.isObj=true;
       }
+      console.log("该数组是value"+tempValue)
   }
   
 }
