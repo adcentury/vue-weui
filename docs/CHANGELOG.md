@@ -1,5 +1,9 @@
 # 变更日志
 
+## 0.2.1
+
+* 新增导航栏相关组件（Tab, Navbar, Tabbar, TabbarItem）
+
 ## 0.2.0
 
 * 新增九宫格相关组件（Girds, Grid）
