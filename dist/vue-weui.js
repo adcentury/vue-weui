@@ -1759,7 +1759,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 	// <template>
 	
-	// <div :class="'weui_dialog_' + type" v-show="show">
+	// <div :class="'weui_dialog_' + type">
 	
 	//   <div class="weui_mask"></div>
 	
@@ -1841,7 +1841,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 87 */
 /***/ function(module, exports) {
 
-	module.exports = "<div :class=\"'weui_dialog_' + type\" v-show=\"show\">\r\n  <div class=\"weui_mask\"></div>\r\n  <div class=\"weui_dialog\">\r\n    <div class=\"weui_dialog_hd\">\r\n      <div class=\"weui_dialog_title\">{{title}}</div>\r\n    </div>\r\n    <div class=\"weui_dialog_bd\"><slot></slot></div>\r\n    <div class=\"weui_dialog_ft\">\r\n      <a v-if=\"type === 'confirm'\" href=\"javascript:;\" class=\"weui_btn_dialog default\" @click=\"dispathEventAndClose('weui-dialog-cancel')\">{{cancelButton}}</a>\r\n      <a href=\"javascript:;\" class=\"weui_btn_dialog primary\" @click=\"dispathEventAndClose('weui-dialog-confirm')\">{{confirmButton}}</a>\r\n    </div>\r\n  </div>\r\n</div>";
+	module.exports = "<div :class=\"'weui_dialog_' + type\">\r\n  <div class=\"weui_mask\"></div>\r\n  <div class=\"weui_dialog\">\r\n    <div class=\"weui_dialog_hd\">\r\n      <div class=\"weui_dialog_title\">{{title}}</div>\r\n    </div>\r\n    <div class=\"weui_dialog_bd\"><slot></slot></div>\r\n    <div class=\"weui_dialog_ft\">\r\n      <a v-if=\"type === 'confirm'\" href=\"javascript:;\" class=\"weui_btn_dialog default\" @click=\"dispathEventAndClose('weui-dialog-cancel')\">{{cancelButton}}</a>\r\n      <a href=\"javascript:;\" class=\"weui_btn_dialog primary\" @click=\"dispathEventAndClose('weui-dialog-confirm')\">{{confirmButton}}</a>\r\n    </div>\r\n  </div>\r\n</div>";
 
 /***/ },
 /* 88 */
