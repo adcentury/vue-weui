@@ -39,6 +39,11 @@
     * [Uploader](#uploader)
     * [UploaderFiles](#uploaderfiles)
     * [UploaderFile](#uploaderfile)
+* [12. 导航栏](#12-导航栏)
+    * [Tab](#Tab)
+    * [Navbar](#Navbar)
+    * [Tabbar](#Tabbar)
+    * [TabbarItem](#TabbarItem)
 
 <!-- toc stop -->
 
@@ -998,3 +1003,102 @@ hasStatus: {
 
 * slots
     * `<slot name="status">`: status区。注意：要显示此slot必须将`hasStatus`置为true
+
+### 12. 导航栏
+
+导航栏包含三个组件，`Tab`、`Navbar`和`Tabbar`。`Tab`是外层容器，导航栏和内容主体均需被包含其中，`Navbar`和`Tabbar`分别为顶部和底部导航栏。两种常用的结构如下：
+
+```html
+<!-- 顶部导航栏 -->
+<tab>
+  <navbar slot="navbar" ...></navbar>
+  <div slot="body">...</div>
+</tab>
+
+<!-- 底部导航栏 -->
+<tab>
+  <div slot="body">...</div>
+  <tabbar slot="tabbar">
+    <tabbar-item></tabbar-item>
+    <tabbar-item></tabbar-item>
+    ...
+  </tabbar>
+</tab>
+```
+
+#### Tab
+外层容器，导航栏需要被包含在其中
+
+* slots
+    * `<slot name="navbar">`: 顶部导航栏区
+    * `<slot name="body">`: 主体内容区
+    * `<slot name="tabbar">`: 底部导航栏区
+
+#### Navbar
+顶部导航栏
+
+* props
+
+```javascript
+/**
+ * Navbar的选项数组
+ * 数组内容支持纯字符串格式和包含key、text字段的对象格式
+ * 若为纯字符串格式，则该项的key为数组下标
+ */
+items: {
+  type: Array,
+  required: true
+},
+
+/**
+ * 选中项的key值
+ */
+selected: {
+  type: null,
+  required: true,
+  twoWay: true
+}
+```
+
+* events
+    * `weui-item-select(key)`: 导航栏元素被选中的事件
+
+#### Tabbar
+底部导航栏容器，需要向其中添加`TabbarItem`组件
+
+#### TabbarItem
+底部导航栏项
+
+* props
+
+```javascript
+/**
+ * 跳转链接
+ */
+link: {
+  type: String,
+  required: false
+},
+
+/**
+ * vue-router使用的跳转链接
+ * 若使用vue-router，推荐使用router-link而非link
+ */
+routerLink: {
+  type: null,
+  required: false
+},
+
+/**
+ * 是否被选中的标识
+ */
+isOn: {
+  type: Boolean,
+  required: false,
+  default: false
+}
+```
+
+* slots
+    * `<slot name="icon">`: 导航栏项的图标区
+    * `<slot name="label">`: 导航栏项的文本标签区

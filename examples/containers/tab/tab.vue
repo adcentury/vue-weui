@@ -6,6 +6,9 @@
       <link-cell router-link="/navbar">
         <span slot="body">navbar</span>
       </link-cell>
+      <link-cell router-link="/tabbar">
+        <span slot="body">tabbar</span>
+      </link-cell>
     </cells>
   </div>
 </div>

@@ -44,6 +44,8 @@ import UploaderFile from './uploader/uploader-file.vue';
 import Tab from './tab/tab.vue';
 import Navbar from './tab/navbar.vue';
 import NavbarItem from './tab/navbar-item.vue';
+import Tabbar from './tab/tabbar.vue';
+import TabbarItem from './tab/tabbar-item.vue';
 
 const VueWeui = {
   ButtonArea,
@@ -78,7 +80,9 @@ const VueWeui = {
   UploaderFile,
   Tab,
   Navbar,
-  NavbarItem
+  NavbarItem,
+  Tabbar,
+  TabbarItem
 };
 
 module.exports = VueWeui;

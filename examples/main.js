@@ -7,7 +7,7 @@ import {App,
   Button, Cell, Toast,
   Dialog, Progress, Message,
   Article, Actionsheet, Icons,
-  Tab, Navbar} from './containers';
+  Tab, Navbar, Tabbar} from './containers';
 
 
 Vue.config.debug = true;
@@ -51,6 +51,9 @@ router.map({
   },
   '/navbar': {
     component: Navbar
+  },
+  '/tabbar': {
+    component: Tabbar
   }
 });
 

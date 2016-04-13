@@ -10,3 +10,4 @@ export Actionsheet from './actionsheet.vue';
 export Icons from './icons.vue';
 export Tab from './tab/tab.vue';
 export Navbar from './tab/navbar.vue';
+export Tabbar from './tab/tabbar.vue';

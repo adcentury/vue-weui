@@ -49,7 +49,9 @@ export default {
 
   methods: {
     selectItem(key) {
-      this.selected = key;
+      if (this.selected !== key) {
+        this.selected = key;
+      }
     }
   },
 
