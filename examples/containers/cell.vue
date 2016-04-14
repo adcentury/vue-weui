@@ -171,7 +171,13 @@ export default {
       areaCodeOptions: ['+86', '+80', '+84', '+87'],
       areaCodeSelected: '+86',
       phoneValue: '',
-      contactTypeOptions: ['微信号', 'QQ号', 'Email'],
+      contactTypeOptions: [
+        '微信号',
+        {
+          value: 'qq',
+          text: 'QQ号'
+        },
+        'Email'],
       contactTypeSelected: '微信号',
       nationOptions: ['中国', '美国', '英国'],
       nationSelected: '中国',
