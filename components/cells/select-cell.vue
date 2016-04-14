@@ -21,6 +21,8 @@ export default {
   props: {
     /**
      * 选项数组
+     * 支持纯字符串格式和包含value、text字段的对象格式
+     * 若为纯字符串，则该项的value和text均为该字符串
      */
     options: {
       type: Array,
@@ -29,7 +31,6 @@ export default {
 
     /**
      * 选中项数据绑定，会用于select的v-model
-     * @type {Object}
      */
     selected: {
       type: null,

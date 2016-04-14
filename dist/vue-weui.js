@@ -56,125 +56,145 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
-	var _buttonArea = __webpack_require__(32);
+	var _buttonArea = __webpack_require__(37);
 	
 	var _buttonArea2 = _interopRequireDefault(_buttonArea);
 	
-	var _button = __webpack_require__(34);
+	var _button = __webpack_require__(39);
 	
 	var _button2 = _interopRequireDefault(_button);
 	
-	var _cellsTitle = __webpack_require__(37);
+	var _cellsTitle = __webpack_require__(42);
 	
 	var _cellsTitle2 = _interopRequireDefault(_cellsTitle);
 	
-	var _cellsTips = __webpack_require__(39);
+	var _cellsTips = __webpack_require__(44);
 	
 	var _cellsTips2 = _interopRequireDefault(_cellsTips);
 	
-	var _cells = __webpack_require__(41);
+	var _cells = __webpack_require__(46);
 	
 	var _cells2 = _interopRequireDefault(_cells);
 	
-	var _cell = __webpack_require__(44);
+	var _cell = __webpack_require__(49);
 	
 	var _cell2 = _interopRequireDefault(_cell);
 	
-	var _linkCell = __webpack_require__(53);
+	var _linkCell = __webpack_require__(58);
 	
 	var _linkCell2 = _interopRequireDefault(_linkCell);
 	
-	var _radioCell = __webpack_require__(56);
+	var _radioCell = __webpack_require__(61);
 	
 	var _radioCell2 = _interopRequireDefault(_radioCell);
 	
-	var _checkboxCell = __webpack_require__(59);
+	var _checkboxCell = __webpack_require__(64);
 	
 	var _checkboxCell2 = _interopRequireDefault(_checkboxCell);
 	
-	var _switchCell = __webpack_require__(62);
+	var _switchCell = __webpack_require__(67);
 	
 	var _switchCell2 = _interopRequireDefault(_switchCell);
 	
-	var _inputCell = __webpack_require__(65);
+	var _inputCell = __webpack_require__(70);
 	
 	var _inputCell2 = _interopRequireDefault(_inputCell);
 	
-	var _selectCell = __webpack_require__(74);
+	var _selectCell = __webpack_require__(79);
 	
 	var _selectCell2 = _interopRequireDefault(_selectCell);
 	
-	var _cellHeader = __webpack_require__(46);
+	var _cellHeader = __webpack_require__(51);
 	
 	var _cellHeader2 = _interopRequireDefault(_cellHeader);
 	
-	var _cellBody = __webpack_require__(48);
+	var _cellBody = __webpack_require__(53);
 	
 	var _cellBody2 = _interopRequireDefault(_cellBody);
 	
-	var _cellFooter = __webpack_require__(50);
+	var _cellFooter = __webpack_require__(55);
 	
 	var _cellFooter2 = _interopRequireDefault(_cellFooter);
 	
-	var _cellInput = __webpack_require__(67);
+	var _cellInput = __webpack_require__(72);
 	
 	var _cellInput2 = _interopRequireDefault(_cellInput);
 	
-	var _cellSelect = __webpack_require__(76);
+	var _cellSelect = __webpack_require__(81);
 	
 	var _cellSelect2 = _interopRequireDefault(_cellSelect);
 	
-	var _toptips = __webpack_require__(80);
+	var _toptips = __webpack_require__(85);
 	
 	var _toptips2 = _interopRequireDefault(_toptips);
 	
-	var _toast = __webpack_require__(82);
+	var _toast = __webpack_require__(87);
 	
 	var _toast2 = _interopRequireDefault(_toast);
 	
-	var _dialog = __webpack_require__(85);
+	var _dialog = __webpack_require__(90);
 	
 	var _dialog2 = _interopRequireDefault(_dialog);
 	
-	var _progress = __webpack_require__(88);
+	var _progress = __webpack_require__(93);
 	
 	var _progress2 = _interopRequireDefault(_progress);
 	
-	var _message = __webpack_require__(91);
+	var _message = __webpack_require__(96);
 	
 	var _message2 = _interopRequireDefault(_message);
 	
-	var _article = __webpack_require__(94);
+	var _article = __webpack_require__(99);
 	
 	var _article2 = _interopRequireDefault(_article);
 	
-	var _actionsheet = __webpack_require__(96);
+	var _actionsheet = __webpack_require__(101);
 	
 	var _actionsheet2 = _interopRequireDefault(_actionsheet);
 	
-	var _icon = __webpack_require__(99);
+	var _icon = __webpack_require__(104);
 	
 	var _icon2 = _interopRequireDefault(_icon);
 	
-	var _grids = __webpack_require__(102);
+	var _grids = __webpack_require__(107);
 	
 	var _grids2 = _interopRequireDefault(_grids);
 	
-	var _grid = __webpack_require__(104);
+	var _grid = __webpack_require__(109);
 	
 	var _grid2 = _interopRequireDefault(_grid);
 	
-	var _uploader = __webpack_require__(107);
+	var _uploader = __webpack_require__(112);
 	
 	var _uploader2 = _interopRequireDefault(_uploader);
 	
-	var _uploaderFiles = __webpack_require__(110);
+	var _uploaderFiles = __webpack_require__(115);
 	
 	var _uploaderFiles2 = _interopRequireDefault(_uploaderFiles);
 	
-	var _uploaderFile = __webpack_require__(112);
+	var _uploaderFile = __webpack_require__(117);
 	
 	var _uploaderFile2 = _interopRequireDefault(_uploaderFile);
+	
+	var _tab = __webpack_require__(120);
+	
+	var _tab2 = _interopRequireDefault(_tab);
+	
+	var _navbar = __webpack_require__(122);
+	
+	var _navbar2 = _interopRequireDefault(_navbar);
+	
+	var _navbarItem = __webpack_require__(124);
+	
+	var _navbarItem2 = _interopRequireDefault(_navbarItem);
+	
+	var _tabbar = __webpack_require__(128);
+	
+	var _tabbar2 = _interopRequireDefault(_tabbar);
+	
+	var _tabbarItem = __webpack_require__(130);
+	
+	var _tabbarItem2 = _interopRequireDefault(_tabbarItem);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -208,7 +228,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	  Grid: _grid2.default,
 	  Uploader: _uploader2.default,
 	  UploaderFiles: _uploaderFiles2.default,
-	  UploaderFile: _uploaderFile2.default
+	  UploaderFile: _uploaderFile2.default,
+	  Tab: _tab2.default,
+	  Navbar: _navbar2.default,
+	  NavbarItem: _navbarItem2.default,
+	  Tabbar: _tabbar2.default,
+	  TabbarItem: _tabbarItem2.default
 	};
 	
 	module.exports = VueWeui;
@@ -245,10 +270,15 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 29 */,
 /* 30 */,
 /* 31 */,
-/* 32 */
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(33)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(38)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -266,19 +296,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 33 */
+/* 38 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"weui_btn_area\"><slot></div>";
 
 /***/ },
-/* 34 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(35)
+	module.exports = __webpack_require__(40)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(36)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(41)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -296,7 +326,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 35 */
+/* 40 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -367,16 +397,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	// </script>
 
 /***/ },
-/* 36 */
+/* 41 */
 /***/ function(module, exports) {
 
 	module.exports = "<a href=\"javascript:;\" class=\"weui_btn\" :class=\"[typeClass, disabled ? 'weui_btn_disabled' : '', mini ? 'weui_btn_mini' : '']\">\r\n  <slot></slot>\r\n</a>";
 
 /***/ },
-/* 37 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(38)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(43)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -394,16 +424,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 38 */
+/* 43 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"weui_cells_title\"><slot></slot></div>";
 
 /***/ },
-/* 39 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(40)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(45)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -421,19 +451,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 40 */
+/* 45 */
 /***/ function(module, exports) {
 
 	module.exports = "<p class=\"weui_cells_tips\"><slot></slot></p>";
 
 /***/ },
-/* 41 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(42)
+	module.exports = __webpack_require__(47)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(43)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(48)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -451,7 +481,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 42 */
+/* 47 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -491,19 +521,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	// </script>
 
 /***/ },
-/* 43 */
+/* 48 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"weui_cells\" :class=\"typeClass\"><slot></slot></div>";
 
 /***/ },
-/* 44 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(45)
+	module.exports = __webpack_require__(50)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(52)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(57)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -521,7 +551,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 45 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -530,15 +560,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _cellHeader = __webpack_require__(46);
+	var _cellHeader = __webpack_require__(51);
 	
 	var _cellHeader2 = _interopRequireDefault(_cellHeader);
 	
-	var _cellBody = __webpack_require__(48);
+	var _cellBody = __webpack_require__(53);
 	
 	var _cellBody2 = _interopRequireDefault(_cellBody);
 	
-	var _cellFooter = __webpack_require__(50);
+	var _cellFooter = __webpack_require__(55);
 	
 	var _cellFooter2 = _interopRequireDefault(_cellFooter);
 	
@@ -569,10 +599,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 46 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(47)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(52)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -590,16 +620,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 47 */
+/* 52 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"weui_cell_hd\"><slot></slot></div>";
 
 /***/ },
-/* 48 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(49)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(54)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -617,16 +647,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 49 */
+/* 54 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"weui_cell_bd weui_cell_primary\"><slot></slot></div>";
 
 /***/ },
-/* 50 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(51)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(56)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -644,25 +674,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 51 */
+/* 56 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"weui_cell_ft\"><slot></slot></div>";
 
 /***/ },
-/* 52 */
+/* 57 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"weui_cell\">\r\n  <cell-header><slot name=\"header\"></slot></cell-header>\r\n  <cell-body><slot name=\"body\"></slot></cell-body>\r\n  <cell-footer><slot name=\"footer\"></slot></cell-footer>\r\n</div>";
 
 /***/ },
-/* 53 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(54)
+	module.exports = __webpack_require__(59)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(55)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(60)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -680,7 +710,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 54 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -689,15 +719,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _cellHeader = __webpack_require__(46);
+	var _cellHeader = __webpack_require__(51);
 	
 	var _cellHeader2 = _interopRequireDefault(_cellHeader);
 	
-	var _cellBody = __webpack_require__(48);
+	var _cellBody = __webpack_require__(53);
 	
 	var _cellBody2 = _interopRequireDefault(_cellBody);
 	
-	var _cellFooter = __webpack_require__(50);
+	var _cellFooter = __webpack_require__(55);
 	
 	var _cellFooter2 = _interopRequireDefault(_cellFooter);
 	
@@ -747,19 +777,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 55 */
+/* 60 */
 /***/ function(module, exports) {
 
 	module.exports = "<a :href=\"link\" v-link=\"routerLink\" class=\"weui_cell\" >\r\n  <cell-header><slot name=\"header\"></slot></cell-header>\r\n  <cell-body><slot name=\"body\"></slot></cell-body>\r\n  <cell-footer><slot name=\"footer\"></slot></cell-footer>\r\n</a>";
 
 /***/ },
-/* 56 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(57)
+	module.exports = __webpack_require__(62)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(58)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(63)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -777,7 +807,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 57 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -786,11 +816,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _cellBody = __webpack_require__(48);
+	var _cellBody = __webpack_require__(53);
 	
 	var _cellBody2 = _interopRequireDefault(_cellBody);
 	
-	var _cellFooter = __webpack_require__(50);
+	var _cellFooter = __webpack_require__(55);
 	
 	var _cellFooter2 = _interopRequireDefault(_cellFooter);
 	
@@ -867,19 +897,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	// </script>
 
 /***/ },
-/* 58 */
+/* 63 */
 /***/ function(module, exports) {
 
 	module.exports = "<label :for=\"id\" class=\"weui_cell weui_check_label\">\r\n  <cell-body>{{{label}}}</cell-body>\r\n  <cell-footer>\r\n    <input type=\"radio\" :name=\"name\" class=\"weui_check\" :id=\"id\" :value=\"value\" v-model=\"picked\">\r\n    <span class=\"weui_icon_checked\"></span>\r\n  </cell-footer>\r\n</label>";
 
 /***/ },
-/* 59 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(60)
+	module.exports = __webpack_require__(65)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(61)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(66)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -897,7 +927,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 60 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -906,11 +936,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _cellHeader = __webpack_require__(46);
+	var _cellHeader = __webpack_require__(51);
 	
 	var _cellHeader2 = _interopRequireDefault(_cellHeader);
 	
-	var _cellBody = __webpack_require__(48);
+	var _cellBody = __webpack_require__(53);
 	
 	var _cellBody2 = _interopRequireDefault(_cellBody);
 	
@@ -987,19 +1017,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	// </script>
 
 /***/ },
-/* 61 */
+/* 66 */
 /***/ function(module, exports) {
 
 	module.exports = "<label :for=\"id\" class=\"weui_cell weui_check_label\">\r\n  <cell-header>\r\n    <input type=\"checkbox\" :name=\"name\" class=\"weui_check\" :id=\"id\" :value=\"value\" v-model=\"checked\">\r\n    <span class=\"weui_icon_checked\"></span>\r\n  </cell-header>\r\n  <cell-body>{{{label}}}</cell-body>\r\n</label>";
 
 /***/ },
-/* 62 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(63)
+	module.exports = __webpack_require__(68)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(64)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(69)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -1017,7 +1047,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 63 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1026,11 +1056,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _cellBody = __webpack_require__(48);
+	var _cellBody = __webpack_require__(53);
 	
 	var _cellBody2 = _interopRequireDefault(_cellBody);
 	
-	var _cellFooter = __webpack_require__(50);
+	var _cellFooter = __webpack_require__(55);
 	
 	var _cellFooter2 = _interopRequireDefault(_cellFooter);
 	
@@ -1106,19 +1136,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	// </script>
 
 /***/ },
-/* 64 */
+/* 69 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"weui_cell weui_cell_switch\">\r\n  <cell-body>{{{label}}}</cell-body>\r\n  <cell-footer>\r\n    <input type=\"checkbox\" :id=\"id\" :name=\"name\" class=\"weui_switch\" v-model=\"on\">\r\n  </cell-footer>\r\n</div>";
 
 /***/ },
-/* 65 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(66)
+	module.exports = __webpack_require__(71)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(73)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(78)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -1136,7 +1166,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 66 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1145,23 +1175,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _cellHeader = __webpack_require__(46);
+	var _cellHeader = __webpack_require__(51);
 	
 	var _cellHeader2 = _interopRequireDefault(_cellHeader);
 	
-	var _cellBody = __webpack_require__(48);
+	var _cellBody = __webpack_require__(53);
 	
 	var _cellBody2 = _interopRequireDefault(_cellBody);
 	
-	var _cellFooter = __webpack_require__(50);
+	var _cellFooter = __webpack_require__(55);
 	
 	var _cellFooter2 = _interopRequireDefault(_cellFooter);
 	
-	var _cellInput = __webpack_require__(67);
+	var _cellInput = __webpack_require__(72);
 	
 	var _cellInput2 = _interopRequireDefault(_cellInput);
 	
-	var _cellTextarea = __webpack_require__(70);
+	var _cellTextarea = __webpack_require__(75);
 	
 	var _cellTextarea2 = _interopRequireDefault(_cellTextarea);
 	
@@ -1301,13 +1331,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 67 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(68)
+	module.exports = __webpack_require__(73)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(69)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(74)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -1325,7 +1355,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 68 */
+/* 73 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1352,19 +1382,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	// </script>
 
 /***/ },
-/* 69 */
+/* 74 */
 /***/ function(module, exports) {
 
 	module.exports = "<input class=\"weui_input\" v-model=\"value\">";
 
 /***/ },
-/* 70 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(71)
+	module.exports = __webpack_require__(76)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(72)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(77)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -1382,7 +1412,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 71 */
+/* 76 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1409,25 +1439,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	// </script>
 
 /***/ },
-/* 72 */
+/* 77 */
 /***/ function(module, exports) {
 
 	module.exports = "<textarea class=\"weui_textarea\" v-model=\"value\"></textarea>";
 
 /***/ },
-/* 73 */
+/* 78 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"weui_cell\" :class=\"{'weui_vcode': vcode, 'weui_cell_warn': warn}\">\r\n  <cell-header v-if=\"label\">\r\n    <label :for=\"id\" class=\"weui_label\">{{{label}}}</label>\r\n  </cell-header>\r\n  <cell-body>\r\n    <cell-textarea :type=\"type\" :placeholder=\"placeholder\" :id=\"id\" :name=\"name\" :rows=\"rows\" :maxlength=\"maxlength\" :value.sync=\"value\" v-if=\"type === 'textarea'\"></cell-textarea>\r\n    <cell-input :type=\"type\" :placeholder=\"placeholder\" :id=\"id\" :name=\"name\" :maxlength=\"maxlength\" :value.sync=\"value\" v-else></cell-input>\r\n    <div class=\"weui_textarea_counter\" v-if=\"type === 'textarea' && maxlength\"><span>{{value.length}}/{{maxlength}}</span></div>\r\n  </cell-body>\r\n  <cell-footer v-if=\"vcode || warn\">\r\n    <i class=\"weui_icon_warn\" v-if=\"warn\"></i>\r\n    <img :src=\"vcode\" v-if=\"vcode\">\r\n  </cell-footer>\r\n</div>";
 
 /***/ },
-/* 74 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(75)
+	module.exports = __webpack_require__(80)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(79)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(84)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -1445,7 +1475,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 75 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1454,19 +1484,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _cellHeader = __webpack_require__(46);
+	var _cellHeader = __webpack_require__(51);
 	
 	var _cellHeader2 = _interopRequireDefault(_cellHeader);
 	
-	var _cellBody = __webpack_require__(48);
+	var _cellBody = __webpack_require__(53);
 	
 	var _cellBody2 = _interopRequireDefault(_cellBody);
 	
-	var _cellFooter = __webpack_require__(50);
+	var _cellFooter = __webpack_require__(55);
 	
 	var _cellFooter2 = _interopRequireDefault(_cellFooter);
 	
-	var _cellSelect = __webpack_require__(76);
+	var _cellSelect = __webpack_require__(81);
 	
 	var _cellSelect2 = _interopRequireDefault(_cellSelect);
 	
@@ -1501,6 +1531,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  props: {
 	    /**
 	     * 选项数组
+	     * 支持纯字符串格式和包含value、text字段的对象格式
+	     * 若为纯字符串，则该项的value和text均为该字符串
 	     */
 	    options: {
 	      type: Array,
@@ -1509,7 +1541,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    /**
 	     * 选中项数据绑定，会用于select的v-model
-	     * @type {Object}
 	     */
 	    selected: {
 	      type: null,
@@ -1547,13 +1578,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	// </script>
 
 /***/ },
-/* 76 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(77)
+	module.exports = __webpack_require__(82)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(78)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(83)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -1571,10 +1602,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 77 */
+/* 82 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -1583,7 +1614,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	// <select class="weui_select" v-model="selected">
 	
-	//   <option v-for="option in options">{{option}}</option>
+	//   <option v-for="option in translatedOptions" :value="option.value">{{option.text}}</option>
 	
 	// </select>
 	
@@ -1597,31 +1628,47 @@ return /******/ (function(modules) { // webpackBootstrap
 	      required: true,
 	      twoWay: true
 	    },
+	
 	    options: {
 	      type: Array,
 	      required: true
+	    }
+	  },
+	
+	  computed: {
+	    translatedOptions: function translatedOptions() {
+	      return this.options.map(function (option) {
+	        if (typeof option === 'string') {
+	          return {
+	            value: option,
+	            text: option
+	          };
+	        } else {
+	          return option;
+	        }
+	      });
 	    }
 	  }
 	};
 	// </script>
 
 /***/ },
-/* 78 */
+/* 83 */
 /***/ function(module, exports) {
 
-	module.exports = "<select class=\"weui_select\" v-model=\"selected\">\r\n  <option v-for=\"option in options\">{{option}}</option>\r\n</select>";
+	module.exports = "<select class=\"weui_select\" v-model=\"selected\">\r\n  <option v-for=\"option in translatedOptions\" :value=\"option.value\">{{option.text}}</option>\r\n</select>";
 
 /***/ },
-/* 79 */
+/* 84 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"weui_cell weui_cell_select\" :class=\"{'weui_select_before': before, 'weui_select_after': after}\">\r\n  <cell-header v-if=\"before || after\">\r\n    <cell-select :options=\"options\" :selected.sync=\"selected\" v-if=\"before\"></cell-select>\r\n    <slot name=\"header\" v-else></slot>\r\n  </cell-header>\r\n  <cell-body>\r\n    <slot name=\"body\" v-if=\"before\"></slot>\r\n    <cell-select :options=\"options\" :selected.sync=\"selected\" v-else></cell-select>\r\n  </cell-body>\r\n</div>";
 
 /***/ },
-/* 80 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(81)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(86)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -1639,19 +1686,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 81 */
+/* 86 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"weui_toptips weui_warn\" :style=\"{display: 'block'}\"><slot></slot></div>";
 
 /***/ },
-/* 82 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(83)
+	module.exports = __webpack_require__(88)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(84)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(89)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -1669,7 +1716,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 83 */
+/* 88 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1719,19 +1766,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	// </script>
 
 /***/ },
-/* 84 */
+/* 89 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"{'weui_loading_toast': type === 'loading'}\">\r\n  <div class=\"weui_mask_transparent\"></div>\r\n  <div class=\"weui_toast\">\r\n    <div class=\"weui_loading\" v-if=\"type === 'loading'\">\r\n      <div v-for=\"n in 12\" class=\"weui_loading_leaf\" :class=\"'weui_loading_leaf_' + n\"></div>\r\n    </div>\r\n    <i class=\"weui_icon_toast\" v-else></i>\r\n    <div class=\"weui_toast_content\"><slot></slot></div>\r\n  </div>\r\n</div>";
 
 /***/ },
-/* 85 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(86)
+	module.exports = __webpack_require__(91)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(87)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(92)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -1749,7 +1796,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 86 */
+/* 91 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1838,19 +1885,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	// </script>
 
 /***/ },
-/* 87 */
+/* 92 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"'weui_dialog_' + type\">\r\n  <div class=\"weui_mask\"></div>\r\n  <div class=\"weui_dialog\">\r\n    <div class=\"weui_dialog_hd\">\r\n      <div class=\"weui_dialog_title\">{{title}}</div>\r\n    </div>\r\n    <div class=\"weui_dialog_bd\"><slot></slot></div>\r\n    <div class=\"weui_dialog_ft\">\r\n      <a v-if=\"type === 'confirm'\" href=\"javascript:;\" class=\"weui_btn_dialog default\" @click=\"dispathEventAndClose('weui-dialog-cancel')\">{{cancelButton}}</a>\r\n      <a href=\"javascript:;\" class=\"weui_btn_dialog primary\" @click=\"dispathEventAndClose('weui-dialog-confirm')\">{{confirmButton}}</a>\r\n    </div>\r\n  </div>\r\n</div>";
 
 /***/ },
-/* 88 */
+/* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(89)
+	module.exports = __webpack_require__(94)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(90)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(95)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -1868,7 +1915,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 89 */
+/* 94 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1931,19 +1978,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	// </script>
 
 /***/ },
-/* 90 */
+/* 95 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"weui_progress\">\r\n  <div class=\"weui_progress_bar\">\r\n    <div class=\"weui_progress_inner_bar\" :style=\"{width: progress + '%'}\"></div>\r\n  </div>\r\n  <a v-if=\"hasCancelButton\" href=\"javascript:;\" class=\"weui_progress_opr\" @click=\"dispatchEvent('weui-progress-cancel')\">\r\n    <i class=\"weui_icon_cancel\"></i>\r\n  </a>\r\n</div>";
 
 /***/ },
-/* 91 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(92)
+	module.exports = __webpack_require__(97)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(93)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(98)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -1961,7 +2008,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 92 */
+/* 97 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -2027,16 +2074,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	// </script>
 
 /***/ },
-/* 93 */
+/* 98 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"weui_msg\">\r\n  <div class=\"weui_icon_area\" v-if=\"icon\">\r\n    <i :class=\"['weui_icon_msg', 'weui_icon_' + icon]\"></i>\r\n  </div>\r\n  <div class=\"weui_text_area\">\r\n    <h2 class=\"weui_msg_title\" v-if=\"title\">{{title}}</h2>\r\n    <div class=\"weui_msg_desc\"><slot name=\"content\"></slot></div>\r\n  </div>\r\n  <div class=\"weui_opr_area\">\r\n    <slot name=\"operation\"></slot>\r\n  </div>\r\n  <div class=\"weui_extra_area\">\r\n    <slot name=\"extra\"></slot>\r\n  </div>\r\n</div>";
 
 /***/ },
-/* 94 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(95)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(100)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -2054,19 +2101,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 95 */
+/* 100 */
 /***/ function(module, exports) {
 
 	module.exports = "<article class=\"weui_article\">\r\n  <slot></slot>\r\n</article>";
 
 /***/ },
-/* 96 */
+/* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(97)
+	module.exports = __webpack_require__(102)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(98)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(103)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -2084,7 +2131,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 97 */
+/* 102 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -2172,19 +2219,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	// </script>
 
 /***/ },
-/* 98 */
+/* 103 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"actionsheet_wrap\">\r\n    <div class=\"weui_mask_transition\" :class=\"{'weui_fade_toggle': show}\" :style=\"{display: show ? 'block' : 'none'}\" @click=\"hideActionSheet\"></div>\r\n    <div class=\"weui_actionsheet\" :class=\"{'weui_actionsheet_toggle': show}\">\r\n      <div class=\"weui_actionsheet_menu\">\r\n        <div class=\"weui_actionsheet_cell\" v-for=\"(key, text) in menus\" @click=\"dispatchEvent('weui-menu-click', key)\">\r\n          {{{text}}}\r\n        </div>\r\n      </div>\r\n      <div class=\"weui_actionsheet_action\">\r\n        <div class=\"weui_actionsheet_cell\" v-for=\"(key, text) in actions\" @click=\"dispatchEvent('weui-action-click', key)\">\r\n          {{{text}}}\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>";
 
 /***/ },
-/* 99 */
+/* 104 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(100)
+	module.exports = __webpack_require__(105)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(101)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(106)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -2202,7 +2249,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 100 */
+/* 105 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -2262,16 +2309,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	// </script>
 
 /***/ },
-/* 101 */
+/* 106 */
 /***/ function(module, exports) {
 
 	module.exports = "<i :class=\"[nameClass, typeClass]\"></i>";
 
 /***/ },
-/* 102 */
+/* 107 */
 /***/ function(module, exports, __webpack_require__) {
 
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(103)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(108)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -2289,19 +2336,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 103 */
+/* 108 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"weui_grids\"><slot></slot></div>";
 
 /***/ },
-/* 104 */
+/* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(105)
+	module.exports = __webpack_require__(110)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(106)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(111)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -2319,7 +2366,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 105 */
+/* 110 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -2384,19 +2431,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	// </script>
 
 /***/ },
-/* 106 */
+/* 111 */
 /***/ function(module, exports) {
 
 	module.exports = "<a :href=\"link\" v-link=\"routerLink\" class=\"weui_grid\">\r\n  <div class=\"weui_grid_icon\" v-if=\"imageUrl\">\r\n    <img :src=\"imageUrl\" alt=\"\">\r\n  </div>\r\n  <p class=\"weui_grid_label\" v-if=\"label\">{{label}}</p>\r\n</a>";
 
 /***/ },
-/* 107 */
+/* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(108)
+	module.exports = __webpack_require__(113)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(109)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(114)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -2414,7 +2461,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 108 */
+/* 113 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2423,7 +2470,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _cell = __webpack_require__(44);
+	var _cell = __webpack_require__(49);
 	
 	var _cell2 = _interopRequireDefault(_cell);
 	
@@ -2507,16 +2554,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	// <script>
 
 /***/ },
-/* 109 */
+/* 114 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"weui_uploader\">\r\n  <cell class=\"weui_uploader_hd\">\r\n    <span slot=\"body\"><slot name=\"title\"></slot></span>\r\n    <span slot=\"footer\" v-if=\"count >= 0 && maxlength > 0\">{{count}}/{{maxlength}}</span>\r\n  </cell>\r\n  <div class=\"weui_uploader_bd\">\r\n    <slot name=\"uploader-files\"></slot>\r\n    <div class=\"weui_uploader_input_wrp\" v-if=\"hasInput\">\r\n      <input type=\"file\" class=\"weui_uploader_input\" accept=\"image/jpg,image/jpeg,image/png,image/gif\" multiple @change=\"dispatchChange\">\r\n    </div>\r\n  </div>\r\n</div>";
 
 /***/ },
-/* 110 */
+/* 115 */
 /***/ function(module, exports, __webpack_require__) {
 
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(111)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(116)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -2534,19 +2581,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 111 */
+/* 116 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"weui_uploader_files\"><slot></slot></div>";
 
 /***/ },
-/* 112 */
+/* 117 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(113)
+	module.exports = __webpack_require__(118)
 	
 	if (module.exports.__esModule) module.exports = module.exports.default
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(114)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(119)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -2564,7 +2611,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 113 */
+/* 118 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -2611,10 +2658,341 @@ return /******/ (function(modules) { // webpackBootstrap
 	// </script>
 
 /***/ },
-/* 114 */
+/* 119 */
 /***/ function(module, exports) {
 
 	module.exports = "<li :class=\"{'weui_uploader_file': true, 'weui_uploader_status': hasStatus}\" :style=\"{'backgroundImage': 'url(' + imageUrl + ')'}\">\r\n  <div class=\"weui_uploader_status_content\">\r\n    <slot name=\"status\"></slot>\r\n  </div>\r\n</li>";
+
+/***/ },
+/* 120 */
+/***/ function(module, exports, __webpack_require__) {
+
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(121)
+	if (false) {
+	(function () {
+	var hotAPI = require("vue-hot-reload-api")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!vue-html-loader!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./tab.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!vue-html-loader!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./tab.vue"], function () {
+	var newOptions = null
+	if (newOptions && newOptions.__esModule) newOptions = newOptions.default
+	var newTemplate = require("-!vue-html-loader!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./tab.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 121 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"weui_tab\">\r\n  <slot name=\"navbar\"></slot>\r\n  <div class=\"weui_tab_bd\">\r\n    <slot name=\"body\"></slot>\r\n  </div>\r\n  <slot name=\"tabbar\"></slot>\r\n</div>";
+
+/***/ },
+/* 122 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(123)
+	
+	if (module.exports.__esModule) module.exports = module.exports.default
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(127)
+	if (false) {
+	(function () {
+	var hotAPI = require("vue-hot-reload-api")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./navbar.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./navbar.vue","-!vue-html-loader!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./navbar.vue"], function () {
+	var newOptions = require("-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./navbar.vue")
+	if (newOptions && newOptions.__esModule) newOptions = newOptions.default
+	var newTemplate = require("-!vue-html-loader!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./navbar.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 123 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _navbarItem = __webpack_require__(124);
+	
+	var _navbarItem2 = _interopRequireDefault(_navbarItem);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	  props: {
+	    /**
+	     * Navbar的选项数组
+	     * 支持纯字符串格式和包含key、text字段的对象格式
+	     * 若为纯字符串，则该项的key为数组下标
+	     */
+	    items: {
+	      type: Array,
+	      required: true
+	    },
+	
+	    /**
+	     * 选中项的key值
+	     */
+	    selected: {
+	      type: null,
+	      required: true,
+	      twoWay: true
+	    }
+	  },
+	
+	  computed: {
+	    translatedItems: function translatedItems() {
+	      return this.items.map(function (item, key) {
+	        if (typeof item === 'string') {
+	          return {
+	            key: key,
+	            text: item
+	          };
+	        } else {
+	          return item;
+	        }
+	      });
+	    }
+	  },
+	
+	  methods: {
+	    selectItem: function selectItem(key) {
+	      if (this.selected !== key) {
+	        this.selected = key;
+	      }
+	    }
+	  },
+	
+	  components: {
+	    NavbarItem: _navbarItem2.default
+	  }
+	};
+	// </script>
+	// <template>
+
+	// <div class="weui_navbar">
+
+	//   <navbar-item v-for="item in translatedItems" :key="item.key"
+
+	//   :is-selected="item.key === selected" @weui-item-select="selectItem">
+
+	//     {{item.text}}
+
+	//   </navbar-item>
+
+	// </div>
+
+	// </template>
+
+	// <script>
+
+/***/ },
+/* 124 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(125)
+	
+	if (module.exports.__esModule) module.exports = module.exports.default
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(126)
+	if (false) {
+	(function () {
+	var hotAPI = require("vue-hot-reload-api")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./navbar-item.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./navbar-item.vue","-!vue-html-loader!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./navbar-item.vue"], function () {
+	var newOptions = require("-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./navbar-item.vue")
+	if (newOptions && newOptions.__esModule) newOptions = newOptions.default
+	var newTemplate = require("-!vue-html-loader!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./navbar-item.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 125 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template>
+	
+	// <div :class="{'weui_navbar_item': true, 'weui_bar_item_on': isSelected}"  @click="selectItem">
+	
+	//   <slot></slot>
+	
+	// </div>
+	
+	// </template>
+	
+	// <script>
+	exports.default = {
+	  props: {
+	    key: {
+	      type: null,
+	      required: true
+	    },
+	
+	    isSelected: {
+	      type: Boolean,
+	      required: false,
+	      default: false
+	    }
+	  },
+	
+	  methods: {
+	    selectItem: function selectItem() {
+	      this.$dispatch('weui-item-select', this.key);
+	    }
+	  }
+	};
+	// </script>
+
+/***/ },
+/* 126 */
+/***/ function(module, exports) {
+
+	module.exports = "<div :class=\"{'weui_navbar_item': true, 'weui_bar_item_on': isSelected}\"  @click=\"selectItem\">\r\n  <slot></slot>\r\n</div>";
+
+/***/ },
+/* 127 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"weui_navbar\">\r\n  <navbar-item v-for=\"item in translatedItems\" :key=\"item.key\"\r\n  :is-selected=\"item.key === selected\" @weui-item-select=\"selectItem\">\r\n    {{item.text}}\r\n  </navbar-item>\r\n</div>";
+
+/***/ },
+/* 128 */
+/***/ function(module, exports, __webpack_require__) {
+
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(129)
+	if (false) {
+	(function () {
+	var hotAPI = require("vue-hot-reload-api")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!vue-html-loader!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./tabbar.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!vue-html-loader!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./tabbar.vue"], function () {
+	var newOptions = null
+	if (newOptions && newOptions.__esModule) newOptions = newOptions.default
+	var newTemplate = require("-!vue-html-loader!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./tabbar.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 129 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"weui_tabbar\">\r\n  <slot></slot>\r\n</div>";
+
+/***/ },
+/* 130 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(131)
+	
+	if (module.exports.__esModule) module.exports = module.exports.default
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(132)
+	if (false) {
+	(function () {
+	var hotAPI = require("vue-hot-reload-api")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./tabbar-item.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./tabbar-item.vue","-!vue-html-loader!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./tabbar-item.vue"], function () {
+	var newOptions = require("-!babel!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./tabbar-item.vue")
+	if (newOptions && newOptions.__esModule) newOptions = newOptions.default
+	var newTemplate = require("-!vue-html-loader!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./tabbar-item.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 131 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template>
+	
+	// <a href="link || 'javascript:;'" v-link="routerLink" class="weui_tabbar_item" :class="{'weui_bar_item_on': isOn}">
+	
+	//   <div class="weui_tabbar_icon">
+	
+	//     <slot name="icon"></slot>
+	
+	//   </div>
+	
+	//   <div class="weui_tabbar_label">
+	
+	//     <slot name="label"></slot>
+	
+	//   </div>
+	
+	// </a>
+	
+	// </template>
+	
+	// <script>
+	exports.default = {
+	  props: {
+	    /**
+	     * 跳转链接
+	     */
+	    link: {
+	      type: String,
+	      required: false
+	    },
+	
+	    /**
+	     * vue-router使用的跳转链接
+	     * 若使用vue-router，推荐使用router-link而非link
+	     */
+	    routerLink: {
+	      type: null,
+	      required: false
+	    },
+	
+	    /**
+	     * 是否被选中的标识
+	     */
+	    isOn: {
+	      type: Boolean,
+	      required: false,
+	      default: false
+	    }
+	  }
+	};
+	// </script>
+
+/***/ },
+/* 132 */
+/***/ function(module, exports) {
+
+	module.exports = "<a href=\"link || 'javascript:;'\" v-link=\"routerLink\" class=\"weui_tabbar_item\" :class=\"{'weui_bar_item_on': isOn}\">\r\n  <div class=\"weui_tabbar_icon\">\r\n    <slot name=\"icon\"></slot>\r\n  </div>\r\n  <div class=\"weui_tabbar_label\">\r\n    <slot name=\"label\"></slot>\r\n  </div>\r\n</a>";
 
 /***/ }
 /******/ ])
