@@ -1,6 +1,6 @@
 {
   "name": "vue-weui",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "WeUI components with love of Vue.js",
   "main": "dist/vue-weui.js",
   "repository": {
