@@ -47,6 +47,10 @@ import NavbarItem from './tab/navbar-item.vue';
 import Tabbar from './tab/tabbar.vue';
 import TabbarItem from './tab/tabbar-item.vue';
 
+import Panel from './panel/panel.vue';
+
+import MediaBox from './mediabox/media-box.vue';
+
 const VueWeui = {
   ButtonArea,
   Button,
