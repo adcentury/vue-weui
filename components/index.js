@@ -48,8 +48,18 @@ import Tabbar from './tab/tabbar.vue';
 import TabbarItem from './tab/tabbar-item.vue';
 
 import Panel from './panel/panel.vue';
+import PanelHeader from './panel/panel-header.vue';
+import PanelBody from './panel/panel-body.vue';
+import PanelFooter from './panel/panel-footer.vue';
 
-import MediaBox from './mediabox/media-box.vue';
+import MediaBox from './media/media-box.vue';
+import MediaHeader from './media/media-header.vue';
+import MediaBody from './media/media-body.vue';
+import MediaAppmsgThumb from './media/media-appmsg-thumb.vue';
+import MediaTitle from './media/media-title.vue';
+import MediaDescription from './media/media-description.vue';
+import MediaInfo from './media/media-info.vue';
+import MediaInfoMeta from './media/media-info-meta.vue';
 
 const VueWeui = {
   ButtonArea,
@@ -86,7 +96,19 @@ const VueWeui = {
   Navbar,
   NavbarItem,
   Tabbar,
-  TabbarItem
+  TabbarItem,
+  Panel,
+  PanelHeader,
+  PanelBody,
+  PanelFooter,
+  MediaBox,
+  MediaHeader,
+  MediaBody,
+  MediaAppmsgThumb,
+  MediaTitle,
+  MediaDescription,
+  MediaInfo,
+  MediaInfoMeta
 };
 
 module.exports = VueWeui;

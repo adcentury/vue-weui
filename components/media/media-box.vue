@@ -1,5 +1,5 @@
 <template>
-<a href="link || 'javascript:;'" v-link="routerLink" class="weui_media_box" :class="typeClass" v-if="!!link || !!routerLink">
+<a :href="link || 'javascript:;'" v-link="routerLink" class="weui_media_box" :class="typeClass" v-if="!!link || !!routerLink">
   <slot></slot>
 </a>
 <div class="weui_media_box" :class="typeClass" v-else>
@@ -10,8 +10,13 @@
 <script>
 export default {
   props: {
+    type: {
+      type: String,
+      required: true
+    },
+
     /**
-     * 底部跳转链接
+     * 跳转链接
      */
     link: {
       type: String,
@@ -25,6 +30,12 @@ export default {
     routerLink: {
       type: null,
       required: false
+    }
+  },
+
+  computed: {
+    typeClass() {
+      return `weui_media_${this.type}`;
     }
   }
 }
