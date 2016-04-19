@@ -32,16 +32,20 @@
       <panel-header>文字组合列表</panel-header>
       <panel-body>
         <media-box type="text">
-          <media-title>标题一</media-title>
-          <media-description>
-            由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。
-          </media-description>
+          <media-body>
+            <media-title>标题一</media-title>
+            <media-description>
+              由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。
+            </media-description>
+          </media-body>
         </media-box>
         <media-box type="text">
-          <media-title>标题二</media-title>
-          <media-description>
-            由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。
-          </media-description>
+          <media-body>
+            <media-title>标题二</media-title>
+            <media-description>
+              由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。
+            </media-description>
+          </media-body>
         </media-box>
       </panel-body>
       <panel-footer>查看更多</panel-footer>
@@ -50,18 +54,20 @@
       <panel-header>小图文组合列表</panel-header>
       <panel-body>
         <media-box type="small_appmsg">
-          <cells type="access">
-            <link-cell link="javascript:;">
-              <img slot="header" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" style="width:20px;margin-right:5px;display:block">
-              <p slot="body">文字标题</p>
-              <span slot="footer"></span>
-            </link-cell>
-            <link-cell link="javascript:;">
-              <img slot="header" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" style="width:20px;margin-right:5px;display:block">
-              <p slot="body">文字标题</p>
-              <span slot="footer"></span>
-            </link-cell>
-          </cells>
+          <media-body>
+            <cells type="access">
+              <link-cell link="javascript:;">
+                <img slot="header" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" style="width:20px;margin-right:5px;display:block">
+                <p slot="body">文字标题</p>
+                <span slot="footer"></span>
+              </link-cell>
+              <link-cell link="javascript:;">
+                <img slot="header" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=" style="width:20px;margin-right:5px;display:block">
+                <p slot="body">文字标题</p>
+                <span slot="footer"></span>
+              </link-cell>
+            </cells>
+          </media-body>
         </media-box>
       </panel-body>
     </panel>
@@ -69,13 +75,15 @@
       <panel-header>文字列表附来源</panel-header>
       <panel-body>
         <media-box type="text">
-          <media-title>标题一</media-title>
-          <media-description>由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</media-description>
-          <media-info>
-            <media-info-meta>文字来源</media-info-meta>
-            <media-info-meta>时间</media-info-meta>
-            <media-info-meta extra>其他信息</media-info-meta>
-          </media-info>
+          <media-body>
+            <media-title>标题一</media-title>
+            <media-description>由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</media-description>
+            <media-info>
+              <media-info-meta>文字来源</media-info-meta>
+              <media-info-meta>时间</media-info-meta>
+              <media-info-meta extra>其他信息</media-info-meta>
+            </media-info>
+          </media-body>
         </media-box>
       </panel-body>
     </panel>
