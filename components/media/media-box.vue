@@ -10,6 +10,12 @@
 <script>
 export default {
   props: {
+    /**
+     * 列表类型，可以为：
+     * appmsg：图文组合列表
+     * text：文字组合列表
+     * small_appmsg：小图文组合列表
+     */
     type: {
       type: String,
       required: true
