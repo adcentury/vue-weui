@@ -846,13 +846,13 @@ type: {
 ```html
 <grids>
   <!-- 一个格子 -->
-  <grid link="some-link" label="some-text" imageUrl="url-of-icon"></grid>
+  <grid link="some-link" label="some-text" image-url="url-of-icon"></grid>
   <!-- 另一个格子 -->
-  <grid link="some-link" label="some-text" imageUrl="url-of-icon"></grid>
+  <grid link="some-link" label="some-text" image-url="url-of-icon"></grid>
   <!-- 第三个格子 -->
-  <grid link="some-link" label="some-text" imageUrl="url-of-icon"></grid>
+  <grid link="some-link" label="some-text" image-url="url-of-icon"></grid>
   <!-- 因为一行三格，所以第四个格子会显示在第二行 -->
-  <grid link="some-link" label="some-text" imageUrl="url-of-icon"></grid>
+  <grid link="some-link" label="some-text" image-url="url-of-icon"></grid>
   <!-- 更多的格子…… -->
 </grids>
 ```
