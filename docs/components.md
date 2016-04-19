@@ -40,10 +40,24 @@
     * [UploaderFiles](#uploaderfiles)
     * [UploaderFile](#uploaderfile)
 * [12. 导航栏](#12-导航栏)
-    * [Tab](#Tab)
-    * [Navbar](#Navbar)
-    * [Tabbar](#Tabbar)
-    * [TabbarItem](#TabbarItem)
+    * [Tab](#tab)
+    * [Navbar](#navbar)
+    * [Tabbar](#tabbar)
+    * [TabbarItem](#tabbaritem)
+* [13. 面板（Panel）相关](#13-面板panel相关)
+    * [Panel](#panel)
+    * [PanelHeader](#panelheader)
+    * [PanelBody](#panelbody)
+    * [PanelFooter](#panelfooter)
+* [14. 组合列表（Media）相关](#14-组合列表Media相关)
+    * [MediaBox](#mediabox)
+    * [MediaHeader](#mediaheader)
+    * [MediaBody](#mediabody)
+    * [MediaAppmsgThumb](#MediaAppmsgThumb)
+    * [MediaTitle](#mediatitle)
+    * [MediaDescription](#mediadescription)
+    * [MediaInfo](#mediainfo)
+    * [MediaInfoMeta](#mediainfometa)
 
 <!-- toc stop -->
 
@@ -1104,3 +1118,192 @@ isOn: {
 * slots
     * `<slot name="icon">`: 导航栏项的图标区
     * `<slot name="label">`: 导航栏项的文本标签区
+
+### 13. 面板（Panel）相关
+
+#### Panel
+
+`Panel`为容器组件，其中可包含`PanelHeader`（可选），`PanelBody`和`PanelFooter`（可选）。若为`Panel`组件添加了`access`属性，则`PanelFooter`将支持“查看更多”样式
+
+一种典型的布局如下：
+
+```html
+<panel access>
+  <panel-header>...</panel-header>
+  <panel-body>...</panel-body>
+  <panel-footer>...</panel-footer>
+</panel>
+```
+
+* props
+
+```javascript
+/**
+ * 底部部分是否包含“查看更多”样式
+ */
+access: {
+  type: Boolean,
+  required: false,
+  default: false
+}
+```
+
+#### PanelHeader
+
+面板头部
+
+#### PanelBody
+
+面板主体部分，一般将`MediaBox`组件放入其中，形成图文组合列表、文字组合列表或小图文组合列表
+
+#### PanelFooter
+
+面板底部
+
+### 14. 组合列表（Media）相关
+
+#### MediaBox
+
+组合列表的容器组件，通过`type`属性来区分类型，可以是图文组合列表（`appmsg`），文字组合列表（`text`）或小图文组合列表（`small_appmsg`）。常用的结构包含：
+
+```html
+<!-- 图文组合列表 -->
+<media-box type="appmsg" link="javascript:;">
+  <media-header>
+    <media-appmsg-thumb></media-appmsg-thumb>
+  </media-header>
+  <media-body>
+    <media-title>...</media-title>
+    <media-description>...</media-description>
+  </media-body>
+</media-box>
+
+<!-- 文字组合列表 -->
+<media-box type="text">
+  <media-body>
+    <media-title>...</media-title>
+    <media-description>...</media-description>
+  </media-body>
+</media-box>
+
+<!-- 小图文组合列表 -->
+<media-box type="small_appmsg">
+  <media-body>
+    <cells type="access">...</cells>
+  </media-body>
+</media-box>
+
+<!-- 文字列表附来源 -->
+<media-box type="text">
+  <media-body>
+    <media-title>...</media-title>
+    <media-description>...</media-description>
+    <media-info>
+      <media-info-meta>...</media-info-meta>
+      <media-info-meta extra>...</media-info-meta>
+      ...
+    </media-info>
+  </media-body>
+</media-box>
+```
+
+* props
+
+```javascript
+/**
+ * 列表类型，可以为：
+ * appmsg：图文组合列表
+ * text：文字组合列表
+ * small_appmsg：小图文组合列表
+ */
+type: {
+  type: String,
+  required: true
+},
+
+/**
+ * 跳转链接
+ */
+link: {
+  type: String,
+  required: false
+},
+
+/**
+ * vue-router使用的跳转链接
+ * 若使用vue-router，推荐使用router-link而非link
+ */
+routerLink: {
+  type: null,
+  required: false
+}
+```
+
+#### MediaHeader
+
+组合列表容器头部，一般将`MediaAppmsgThumb`组件放入其中
+
+#### MediaBody
+
+组合列表容器主体
+
+#### MediaAppmsgThumb
+
+头部图片，一般放入`MediaHeader`中
+
+* props
+
+```javascript
+/**
+ * 应用于图片的src
+ */
+src: {
+  type: String,
+  required: true
+},
+
+/**
+ * 应用于图片的alt
+ */
+alt: {
+  type: String,
+  required: false
+}
+```
+
+#### MediaTitle
+
+列表主体部分标题
+
+#### MediaDescription
+
+列表主体部分详细信息
+
+#### MediaInfo
+
+列表主体部分附加信息容器，内部包含`MediaInfoMeta`，常用结构如下：
+
+```html
+<media-info>
+  <media-info-meta>...</media-info-meta>
+  <media-info-meta extra>...</media-info-meta>
+  ...
+</media-info>
+```
+
+#### MediaInfoMeta
+
+列表主体部分附加信息，包含于`MediaInfo`中
+
+* props
+
+```javascript
+/**
+ * 是否为extra的标识，若是，则文字左方会有竖线隔离符
+ */
+extra: {
+  type: Boolean,
+  required: false,
+  default: false
+}
+```
