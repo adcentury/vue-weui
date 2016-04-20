@@ -1,7 +1,7 @@
 <template>
 <div class="weui_search_bar" :class="{'weui_search_focusing': isFocusing || !!value}">
   <div class="weui_search_outer">
-    <form class="weui_search_inner" @submit="submit" action="./hello">
+    <form class="weui_search_inner" @submit="submit">
       <i class="weui_icon_search"></i>
       <input type="search" class="weui_search_input" id="searchInput" :placeholder="placeholder" required v-model="value" v-el:input @focus="isFocusing = true" @blur="isFocusing = false">
       <a href="javascript:;" class="weui_icon_clear" @click="clearInput"></a>
