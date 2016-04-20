@@ -1342,3 +1342,7 @@ value: {
   twoWay: true
 }
 ```
+
+* events
+
+    * __`weui-search-bar-submit`__: 搜索栏提交事件（一般为用户在软键盘中点击了“搜索”按钮）
