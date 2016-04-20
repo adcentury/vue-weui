@@ -1,5 +1,9 @@
 # 变更日志
 
+## 0.3.1
+
+* 为SearchBar添加`weui-search-bar-submit`事件
+
 ## 0.3.0
 
 * 新增面板相关组件（Panel, PanelHeader, PanelBody, PanelFooter)
