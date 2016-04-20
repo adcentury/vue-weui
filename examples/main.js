@@ -8,7 +8,7 @@ import {App,
   Dialog, Progress, Message,
   Article, Actionsheet, Icons,
   Tab, Navbar, Tabbar,
-  Panel} from './containers';
+  Panel, SearchBar} from './containers';
 
 
 Vue.config.debug = true;
@@ -58,6 +58,9 @@ router.map({
   },
   '/panel': {
     component: Panel
+  },
+  '/search-bar': {
+    component: SearchBar
   }
 });
 

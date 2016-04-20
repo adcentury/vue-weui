@@ -76,7 +76,7 @@ export default {
         image: icon_nav_tab
       }, {
         text: 'SearchBar',
-        url: 'searchbar',
+        url: 'search-bar',
         image: icon_nav_search_bar
       }]
     };
