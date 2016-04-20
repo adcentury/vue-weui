@@ -11,3 +11,5 @@ export Icons from './icons.vue';
 export Tab from './tab/tab.vue';
 export Navbar from './tab/navbar.vue';
 export Tabbar from './tab/tabbar.vue';
+export Panel from './panel.vue';
+export SearchBar from './search-bar.vue';

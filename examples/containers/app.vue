@@ -18,6 +18,7 @@ import icon_nav_button from '../images/icon_nav_button.png';
 import icon_nav_cell from '../images/icon_nav_cell.png';
 import icon_nav_toast from '../images/icon_nav_toast.png';
 import icon_nav_dialog from '../images/icon_nav_dialog.png';
+import icon_nav_progress from '../images/icon_nav_progress.png';
 import icon_nav_msg from '../images/icon_nav_msg.png';
 import icon_nav_article from '../images/icon_nav_article.png';
 import icon_nav_actionSheet from '../images/icon_nav_actionSheet.png';
@@ -48,7 +49,7 @@ export default {
       }, {
         text: 'Progress',
         url: 'progress',
-        image: icon_nav_button
+        image: icon_nav_progress
       }, {
         text: 'Msg Page',
         url: 'message',
@@ -75,7 +76,7 @@ export default {
         image: icon_nav_tab
       }, {
         text: 'SearchBar',
-        url: 'searchbar',
+        url: 'search-bar',
         image: icon_nav_search_bar
       }]
     };
