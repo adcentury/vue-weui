@@ -1,16 +1,16 @@
 <template>
 <div class="weui_search_bar" :class="{'weui_search_focusing': isFocusing || !!value}">
-  <form class="weui_search_outer">
-    <div class="weui_search_inner">
+  <div class="weui_search_outer">
+    <form class="weui_search_inner" @submit="submit" action="./hello">
       <i class="weui_icon_search"></i>
       <input type="search" class="weui_search_input" id="searchInput" :placeholder="placeholder" required v-model="value" v-el:input @focus="isFocusing = true" @blur="isFocusing = false">
       <a href="javascript:;" class="weui_icon_clear" @click="clearInput"></a>
-    </div>
+    </form>
     <label for="searchInput" class="weui_search_text">
       <i class="weui_icon_search"></i>
       <span v-if="!!placeholder">{{placeholder}}</span>
     </label>
-  </form>
+  </div>
   <a href="javascript:;" class="weui_search_cancel" v-if="!!cancelText && isFocusing" @click="cancelInput">{{cancelText}}</a>
 </div>
 </template>
@@ -58,6 +58,11 @@ export default {
 
     cancelInput() {
       this.value = '';
+    },
+
+    submit(event) {
+      event.preventDefault();
+      this.$dispatch('weui-search-bar-submit');
     }
   }
 }
