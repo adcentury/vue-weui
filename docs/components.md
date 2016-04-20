@@ -49,7 +49,7 @@
     * [PanelHeader](#panelheader)
     * [PanelBody](#panelbody)
     * [PanelFooter](#panelfooter)
-* [14. 组合列表（Media）相关](#14-组合列表Media相关)
+* [14. 组合列表（Media）相关](#14-组合列表media相关)
     * [MediaBox](#mediabox)
     * [MediaHeader](#mediaheader)
     * [MediaBody](#mediabody)
@@ -58,6 +58,8 @@
     * [MediaDescription](#mediadescription)
     * [MediaInfo](#mediainfo)
     * [MediaInfoMeta](#mediainfometa)
+* [15. 搜索栏](#15-搜索栏)
+    * [SearchBar](#searchbar)
 
 <!-- toc stop -->
 
@@ -1305,5 +1307,38 @@ extra: {
   type: Boolean,
   required: false,
   default: false
+}
+```
+
+### 15. 搜索栏
+
+#### SearchBar
+
+* props
+
+```javascript
+/**
+ * 标签
+ */
+placeholder: {
+  type: String,
+  required: false
+},
+
+/**
+ * 取消按钮文本，若不设置则无取消按钮
+ */
+cancelText: {
+  type: String,
+  required: false
+},
+
+/**
+ * 双向绑定的搜索框输入内容
+ */
+value: {
+  type: String,
+  required: true,
+  twoWay: true
 }
 ```
