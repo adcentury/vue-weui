@@ -3652,9 +3652,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	// <div class="weui_search_bar" :class="{'weui_search_focusing': isFocusing || !!value}">
 	
-	//   <form class="weui_search_outer">
+	//   <div class="weui_search_outer">
 	
-	//     <div class="weui_search_inner">
+	//     <form class="weui_search_inner" @submit="submit">
 	
 	//       <i class="weui_icon_search"></i>
 	
@@ -3662,7 +3662,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	//       <a href="javascript:;" class="weui_icon_clear" @click="clearInput"></a>
 	
-	//     </div>
+	//     </form>
 	
 	//     <label for="searchInput" class="weui_search_text">
 	
@@ -3672,7 +3672,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	//     </label>
 	
-	//   </form>
+	//   </div>
 	
 	//   <a href="javascript:;" class="weui_search_cancel" v-if="!!cancelText && isFocusing" @click="cancelInput">{{cancelText}}</a>
 	
@@ -3722,6 +3722,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	    cancelInput: function cancelInput() {
 	      this.value = '';
+	    },
+	    submit: function submit(event) {
+	      event.preventDefault();
+	      this.$dispatch('weui-search-bar-submit');
 	    }
 	  }
 	};
@@ -3731,7 +3735,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 177 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"weui_search_bar\" :class=\"{'weui_search_focusing': isFocusing || !!value}\">\r\n  <form class=\"weui_search_outer\">\r\n    <div class=\"weui_search_inner\">\r\n      <i class=\"weui_icon_search\"></i>\r\n      <input type=\"search\" class=\"weui_search_input\" id=\"searchInput\" :placeholder=\"placeholder\" required v-model=\"value\" v-el:input @focus=\"isFocusing = true\" @blur=\"isFocusing = false\">\r\n      <a href=\"javascript:;\" class=\"weui_icon_clear\" @click=\"clearInput\"></a>\r\n    </div>\r\n    <label for=\"searchInput\" class=\"weui_search_text\">\r\n      <i class=\"weui_icon_search\"></i>\r\n      <span v-if=\"!!placeholder\">{{placeholder}}</span>\r\n    </label>\r\n  </form>\r\n  <a href=\"javascript:;\" class=\"weui_search_cancel\" v-if=\"!!cancelText && isFocusing\" @click=\"cancelInput\">{{cancelText}}</a>\r\n</div>";
+	module.exports = "<div class=\"weui_search_bar\" :class=\"{'weui_search_focusing': isFocusing || !!value}\">\r\n  <div class=\"weui_search_outer\">\r\n    <form class=\"weui_search_inner\" @submit=\"submit\">\r\n      <i class=\"weui_icon_search\"></i>\r\n      <input type=\"search\" class=\"weui_search_input\" id=\"searchInput\" :placeholder=\"placeholder\" required v-model=\"value\" v-el:input @focus=\"isFocusing = true\" @blur=\"isFocusing = false\">\r\n      <a href=\"javascript:;\" class=\"weui_icon_clear\" @click=\"clearInput\"></a>\r\n    </form>\r\n    <label for=\"searchInput\" class=\"weui_search_text\">\r\n      <i class=\"weui_icon_search\"></i>\r\n      <span v-if=\"!!placeholder\">{{placeholder}}</span>\r\n    </label>\r\n  </div>\r\n  <a href=\"javascript:;\" class=\"weui_search_cancel\" v-if=\"!!cancelText && isFocusing\" @click=\"cancelInput\">{{cancelText}}</a>\r\n</div>";
 
 /***/ }
 /******/ ])
