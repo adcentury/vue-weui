@@ -61,6 +61,8 @@ import MediaDescription from './media/media-description.vue';
 import MediaInfo from './media/media-info.vue';
 import MediaInfoMeta from './media/media-info-meta.vue';
 
+import SearchBar from './search-bar/search-bar.vue';
+
 const VueWeui = {
   ButtonArea,
   Button,
@@ -108,7 +110,8 @@ const VueWeui = {
   MediaTitle,
   MediaDescription,
   MediaInfo,
-  MediaInfoMeta
+  MediaInfoMeta,
+  SearchBar
 };
 
 module.exports = VueWeui;
