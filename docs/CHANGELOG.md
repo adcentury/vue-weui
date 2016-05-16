@@ -1,5 +1,9 @@
 # 变更日志
 
+## 0.3.2
+
+* 修改`LinkCell`组件，解决`vue-router`中`href`被覆盖的bug（https://github.com/adcentury/vue-weui/issues/38）
+
 ## 0.3.1
 
 * 为SearchBar添加`weui-search-bar-submit`事件
