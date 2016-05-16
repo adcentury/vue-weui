@@ -413,13 +413,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	// <template>
-	
 	// <a href="javascript:;" class="weui_btn" :class="[typeClass, disabled ? 'weui_btn_disabled' : '', mini ? 'weui_btn_mini' : '']">
-	
 	//   <slot></slot>
-	
 	// </a>
-	
 	// </template>
 	
 	// <script>
@@ -478,7 +474,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 54 */
 /***/ function(module, exports) {
 
-	module.exports = "<a href=\"javascript:;\" class=\"weui_btn\" :class=\"[typeClass, disabled ? 'weui_btn_disabled' : '', mini ? 'weui_btn_mini' : '']\">\r\n  <slot></slot>\r\n</a>";
+	module.exports = "<a href=\"javascript:;\" class=\"weui_btn\" :class=\"[typeClass, disabled ? 'weui_btn_disabled' : '', mini ? 'weui_btn_mini' : '']\">\n  <slot></slot>\n</a>";
 
 /***/ },
 /* 55 */
@@ -568,9 +564,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	// <template>
-	
 	// <div class="weui_cells" :class="typeClass"><slot></slot></div>
-	
 	// </template>
 	
 	// <script>
@@ -661,17 +655,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	// </script>
 	// <template>
-
 	// <div class="weui_cell">
-
 	//   <cell-header><slot name="header"></slot></cell-header>
-
 	//   <cell-body><slot name="body"></slot></cell-body>
-
 	//   <cell-footer><slot name="footer"></slot></cell-footer>
-
 	// </div>
-
 	// </template>
 
 	// <script>
@@ -761,7 +749,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 70 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"weui_cell\">\r\n  <cell-header><slot name=\"header\"></slot></cell-header>\r\n  <cell-body><slot name=\"body\"></slot></cell-body>\r\n  <cell-footer><slot name=\"footer\"></slot></cell-footer>\r\n</div>";
+	module.exports = "<div class=\"weui_cell\">\n  <cell-header><slot name=\"header\"></slot></cell-header>\n  <cell-body><slot name=\"body\"></slot></cell-body>\n  <cell-footer><slot name=\"footer\"></slot></cell-footer>\n</div>";
 
 /***/ },
 /* 71 */
@@ -812,6 +800,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = {
+	  data: function data() {
+	    return {
+	      cloneLink: null
+	    };
+	  },
+	
 	  props: {
 	    /**
 	     * 跳转链接，若设置则此列表项可点击跳转
@@ -835,21 +829,34 @@ return /******/ (function(modules) { // webpackBootstrap
 	    CellHeader: _cellHeader2.default,
 	    CellBody: _cellBody2.default,
 	    CellFooter: _cellFooter2.default
+	  },
+	
+	  ready: function ready() {
+	    var _this = this;
+	
+	    /**
+	     * 如果调用该组件时设置了 link 并且未设置 routerLink
+	     * 则将 link 值拷贝至 cloneLink 以解决该问题：
+	     * https://github.com/adcentury/vue-weui/issues/38
+	     * 
+	     * 该做法相当于在 v-link 指令初始化完成并覆写 href 属性之后
+	     * 再度为 href 进行了赋值
+	     */
+	    if (this.link && this.routerLink === undefined) {
+	      this.cloneLink = this.link;
+	    }
+	    this.$watch('link', function (newVal) {
+	      _this.cloneLink = newVal;
+	    });
 	  }
 	};
 	// </script>
 	// <template>
-
-	// <a :href="link" v-link="routerLink" class="weui_cell" >
-
+	// <a :href="cloneLink" v-link="routerLink" class="weui_cell" >
 	//   <cell-header><slot name="header"></slot></cell-header>
-
 	//   <cell-body><slot name="body"></slot></cell-body>
-
 	//   <cell-footer><slot name="footer"></slot></cell-footer>
-
 	// </a>
-
 	// </template>
 
 	// <script>
@@ -858,7 +865,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 73 */
 /***/ function(module, exports) {
 
-	module.exports = "<a :href=\"link\" v-link=\"routerLink\" class=\"weui_cell\" >\r\n  <cell-header><slot name=\"header\"></slot></cell-header>\r\n  <cell-body><slot name=\"body\"></slot></cell-body>\r\n  <cell-footer><slot name=\"footer\"></slot></cell-footer>\r\n</a>";
+	module.exports = "<a :href=\"cloneLink\" v-link=\"routerLink\" class=\"weui_cell\" >\n  <cell-header><slot name=\"header\"></slot></cell-header>\n  <cell-body><slot name=\"body\"></slot></cell-body>\n  <cell-footer><slot name=\"footer\"></slot></cell-footer>\n</a>";
 
 /***/ },
 /* 74 */
@@ -905,21 +912,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	// <template>
-	
 	// <label :for="id" class="weui_cell weui_check_label">
-	
 	//   <cell-body>{{{label}}}</cell-body>
-	
 	//   <cell-footer>
-	
 	//     <input type="radio" :name="name" class="weui_check" :id="id" :value="value" v-model="picked">
-	
 	//     <span class="weui_icon_checked"></span>
-	
 	//   </cell-footer>
-	
 	// </label>
-	
 	// </template>
 	
 	// <script>
@@ -978,7 +977,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 76 */
 /***/ function(module, exports) {
 
-	module.exports = "<label :for=\"id\" class=\"weui_cell weui_check_label\">\r\n  <cell-body>{{{label}}}</cell-body>\r\n  <cell-footer>\r\n    <input type=\"radio\" :name=\"name\" class=\"weui_check\" :id=\"id\" :value=\"value\" v-model=\"picked\">\r\n    <span class=\"weui_icon_checked\"></span>\r\n  </cell-footer>\r\n</label>";
+	module.exports = "<label :for=\"id\" class=\"weui_cell weui_check_label\">\n  <cell-body>{{{label}}}</cell-body>\n  <cell-footer>\n    <input type=\"radio\" :name=\"name\" class=\"weui_check\" :id=\"id\" :value=\"value\" v-model=\"picked\">\n    <span class=\"weui_icon_checked\"></span>\n  </cell-footer>\n</label>";
 
 /***/ },
 /* 77 */
@@ -1025,21 +1024,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	// <template>
-	
 	// <label :for="id" class="weui_cell weui_check_label">
-	
 	//   <cell-header>
-	
 	//     <input type="checkbox" :name="name" class="weui_check" :id="id" :value="value" v-model="checked">
-	
 	//     <span class="weui_icon_checked"></span>
-	
 	//   </cell-header>
-	
 	//   <cell-body>{{{label}}}</cell-body>
-	
 	// </label>
-	
 	// </template>
 	
 	// <script>
@@ -1098,7 +1089,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 79 */
 /***/ function(module, exports) {
 
-	module.exports = "<label :for=\"id\" class=\"weui_cell weui_check_label\">\r\n  <cell-header>\r\n    <input type=\"checkbox\" :name=\"name\" class=\"weui_check\" :id=\"id\" :value=\"value\" v-model=\"checked\">\r\n    <span class=\"weui_icon_checked\"></span>\r\n  </cell-header>\r\n  <cell-body>{{{label}}}</cell-body>\r\n</label>";
+	module.exports = "<label :for=\"id\" class=\"weui_cell weui_check_label\">\n  <cell-header>\n    <input type=\"checkbox\" :name=\"name\" class=\"weui_check\" :id=\"id\" :value=\"value\" v-model=\"checked\">\n    <span class=\"weui_icon_checked\"></span>\n  </cell-header>\n  <cell-body>{{{label}}}</cell-body>\n</label>";
 
 /***/ },
 /* 80 */
@@ -1145,19 +1136,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	// <template>
-	
 	// <div class="weui_cell weui_cell_switch">
-	
 	//   <cell-body>{{{label}}}</cell-body>
-	
 	//   <cell-footer>
-	
 	//     <input type="checkbox" :id="id" :name="name" class="weui_switch" v-model="on">
-	
 	//   </cell-footer>
-	
 	// </div>
-	
 	// </template>
 	
 	// <script>
@@ -1217,7 +1201,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 82 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"weui_cell weui_cell_switch\">\r\n  <cell-body>{{{label}}}</cell-body>\r\n  <cell-footer>\r\n    <input type=\"checkbox\" :id=\"id\" :name=\"name\" class=\"weui_switch\" v-model=\"on\">\r\n  </cell-footer>\r\n</div>";
+	module.exports = "<div class=\"weui_cell weui_cell_switch\">\n  <cell-body>{{{label}}}</cell-body>\n  <cell-footer>\n    <input type=\"checkbox\" :id=\"id\" :name=\"name\" class=\"weui_switch\" v-model=\"on\">\n  </cell-footer>\n</div>";
 
 /***/ },
 /* 83 */
@@ -1375,35 +1359,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	// </script>
 	// <template>
-
 	// <div class="weui_cell" :class="{'weui_vcode': vcode, 'weui_cell_warn': warn}">
-
 	//   <cell-header v-if="label">
-
 	//     <label :for="id" class="weui_label">{{{label}}}</label>
-
 	//   </cell-header>
-
 	//   <cell-body>
-
 	//     <cell-textarea :type="type" :placeholder="placeholder" :id="id" :name="name" :rows="rows" :maxlength="maxlength" :value.sync="value" v-if="type === 'textarea'"></cell-textarea>
-
 	//     <cell-input :type="type" :placeholder="placeholder" :id="id" :name="name" :maxlength="maxlength" :value.sync="value" v-else></cell-input>
-
 	//     <div class="weui_textarea_counter" v-if="type === 'textarea' && maxlength"><span>{{value.length}}/{{maxlength}}</span></div>
-
 	//   </cell-body>
-
 	//   <cell-footer v-if="vcode || warn">
-
 	//     <i class="weui_icon_warn" v-if="warn"></i>
-
 	//     <img :src="vcode" v-if="vcode">
-
 	//   </cell-footer>
-
 	// </div>
-
 	// </template>
 
 	// <script>
@@ -1442,9 +1411,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	// <template>
-	
 	// <input class="weui_input" v-model="value">
-	
 	// </template>
 	
 	// <script>
@@ -1499,9 +1466,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	// <template>
-	
 	// <textarea class="weui_textarea" v-model="value"></textarea>
-	
 	// </template>
 	
 	// <script>
@@ -1526,7 +1491,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 91 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"weui_cell\" :class=\"{'weui_vcode': vcode, 'weui_cell_warn': warn}\">\r\n  <cell-header v-if=\"label\">\r\n    <label :for=\"id\" class=\"weui_label\">{{{label}}}</label>\r\n  </cell-header>\r\n  <cell-body>\r\n    <cell-textarea :type=\"type\" :placeholder=\"placeholder\" :id=\"id\" :name=\"name\" :rows=\"rows\" :maxlength=\"maxlength\" :value.sync=\"value\" v-if=\"type === 'textarea'\"></cell-textarea>\r\n    <cell-input :type=\"type\" :placeholder=\"placeholder\" :id=\"id\" :name=\"name\" :maxlength=\"maxlength\" :value.sync=\"value\" v-else></cell-input>\r\n    <div class=\"weui_textarea_counter\" v-if=\"type === 'textarea' && maxlength\"><span>{{value.length}}/{{maxlength}}</span></div>\r\n  </cell-body>\r\n  <cell-footer v-if=\"vcode || warn\">\r\n    <i class=\"weui_icon_warn\" v-if=\"warn\"></i>\r\n    <img :src=\"vcode\" v-if=\"vcode\">\r\n  </cell-footer>\r\n</div>";
+	module.exports = "<div class=\"weui_cell\" :class=\"{'weui_vcode': vcode, 'weui_cell_warn': warn}\">\n  <cell-header v-if=\"label\">\n    <label :for=\"id\" class=\"weui_label\">{{{label}}}</label>\n  </cell-header>\n  <cell-body>\n    <cell-textarea :type=\"type\" :placeholder=\"placeholder\" :id=\"id\" :name=\"name\" :rows=\"rows\" :maxlength=\"maxlength\" :value.sync=\"value\" v-if=\"type === 'textarea'\"></cell-textarea>\n    <cell-input :type=\"type\" :placeholder=\"placeholder\" :id=\"id\" :name=\"name\" :maxlength=\"maxlength\" :value.sync=\"value\" v-else></cell-input>\n    <div class=\"weui_textarea_counter\" v-if=\"type === 'textarea' && maxlength\"><span>{{value.length}}/{{maxlength}}</span></div>\n  </cell-body>\n  <cell-footer v-if=\"vcode || warn\">\n    <i class=\"weui_icon_warn\" v-if=\"warn\"></i>\n    <img :src=\"vcode\" v-if=\"vcode\">\n  </cell-footer>\n</div>";
 
 /***/ },
 /* 92 */
@@ -1581,27 +1546,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	// <template>
-	
 	// <div class="weui_cell weui_cell_select" :class="{'weui_select_before': before, 'weui_select_after': after}">
-	
 	//   <cell-header v-if="before || after">
-	
 	//     <cell-select :options="options" :selected.sync="selected" v-if="before"></cell-select>
-	
 	//     <slot name="header" v-else></slot>
-	
 	//   </cell-header>
-	
 	//   <cell-body>
-	
 	//     <slot name="body" v-if="before"></slot>
-	
 	//     <cell-select :options="options" :selected.sync="selected" v-else></cell-select>
-	
 	//   </cell-body>
-	
 	// </div>
-	
 	// </template>
 	
 	// <script>
@@ -1652,7 +1606,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    CellSelect: _cellSelect2.default
 	  }
 	};
-	
+
 	// </script>
 
 /***/ },
@@ -1689,13 +1643,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	// <template>
-	
 	// <select class="weui_select" v-model="selected">
-	
 	//   <option v-for="option in translatedOptions" :value="option.value">{{option.text}}</option>
-	
 	// </select>
-	
 	// </template>
 	
 	// <script>
@@ -1734,13 +1684,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 96 */
 /***/ function(module, exports) {
 
-	module.exports = "<select class=\"weui_select\" v-model=\"selected\">\r\n  <option v-for=\"option in translatedOptions\" :value=\"option.value\">{{option.text}}</option>\r\n</select>";
+	module.exports = "<select class=\"weui_select\" v-model=\"selected\">\n  <option v-for=\"option in translatedOptions\" :value=\"option.value\">{{option.text}}</option>\n</select>";
 
 /***/ },
 /* 97 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"weui_cell weui_cell_select\" :class=\"{'weui_select_before': before, 'weui_select_after': after}\">\r\n  <cell-header v-if=\"before || after\">\r\n    <cell-select :options=\"options\" :selected.sync=\"selected\" v-if=\"before\"></cell-select>\r\n    <slot name=\"header\" v-else></slot>\r\n  </cell-header>\r\n  <cell-body>\r\n    <slot name=\"body\" v-if=\"before\"></slot>\r\n    <cell-select :options=\"options\" :selected.sync=\"selected\" v-else></cell-select>\r\n  </cell-body>\r\n</div>";
+	module.exports = "<div class=\"weui_cell weui_cell_select\" :class=\"{'weui_select_before': before, 'weui_select_after': after}\">\n  <cell-header v-if=\"before || after\">\n    <cell-select :options=\"options\" :selected.sync=\"selected\" v-if=\"before\"></cell-select>\n    <slot name=\"header\" v-else></slot>\n  </cell-header>\n  <cell-body>\n    <slot name=\"body\" v-if=\"before\"></slot>\n    <cell-select :options=\"options\" :selected.sync=\"selected\" v-else></cell-select>\n  </cell-body>\n</div>";
 
 /***/ },
 /* 98 */
@@ -1803,27 +1753,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	// <template>
-	
 	// <div :class="{'weui_loading_toast': type === 'loading'}">
-	
 	//   <div class="weui_mask_transparent"></div>
-	
 	//   <div class="weui_toast">
-	
 	//     <div class="weui_loading" v-if="type === 'loading'">
-	
 	//       <div v-for="n in 12" class="weui_loading_leaf" :class="'weui_loading_leaf_' + n"></div>
-	
 	//     </div>
-	
 	//     <i class="weui_icon_toast" v-else></i>
-	
 	//     <div class="weui_toast_content"><slot></slot></div>
-	
 	//   </div>
-	
 	// </div>
-	
 	// </template>
 	
 	// <script>
@@ -1847,7 +1786,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 102 */
 /***/ function(module, exports) {
 
-	module.exports = "<div :class=\"{'weui_loading_toast': type === 'loading'}\">\r\n  <div class=\"weui_mask_transparent\"></div>\r\n  <div class=\"weui_toast\">\r\n    <div class=\"weui_loading\" v-if=\"type === 'loading'\">\r\n      <div v-for=\"n in 12\" class=\"weui_loading_leaf\" :class=\"'weui_loading_leaf_' + n\"></div>\r\n    </div>\r\n    <i class=\"weui_icon_toast\" v-else></i>\r\n    <div class=\"weui_toast_content\"><slot></slot></div>\r\n  </div>\r\n</div>";
+	module.exports = "<div :class=\"{'weui_loading_toast': type === 'loading'}\">\n  <div class=\"weui_mask_transparent\"></div>\n  <div class=\"weui_toast\">\n    <div class=\"weui_loading\" v-if=\"type === 'loading'\">\n      <div v-for=\"n in 12\" class=\"weui_loading_leaf\" :class=\"'weui_loading_leaf_' + n\"></div>\n    </div>\n    <i class=\"weui_icon_toast\" v-else></i>\n    <div class=\"weui_toast_content\"><slot></slot></div>\n  </div>\n</div>";
 
 /***/ },
 /* 103 */
@@ -1883,33 +1822,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	// <template>
-	
 	// <div :class="'weui_dialog_' + type">
-	
 	//   <div class="weui_mask"></div>
-	
 	//   <div class="weui_dialog">
-	
 	//     <div class="weui_dialog_hd">
-	
 	//       <div class="weui_dialog_title">{{title}}</div>
-	
 	//     </div>
-	
 	//     <div class="weui_dialog_bd"><slot></slot></div>
-	
 	//     <div class="weui_dialog_ft">
-	
 	//       <a v-if="type === 'confirm'" href="javascript:;" class="weui_btn_dialog default" @click="dispathEventAndClose('weui-dialog-cancel')">{{cancelButton}}</a>
-	
 	//       <a href="javascript:;" class="weui_btn_dialog primary" @click="dispathEventAndClose('weui-dialog-confirm')">{{confirmButton}}</a>
-	
 	//     </div>
-	
 	//   </div>
-	
 	// </div>
-	
 	// </template>
 	
 	// <script>
@@ -1966,7 +1891,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 105 */
 /***/ function(module, exports) {
 
-	module.exports = "<div :class=\"'weui_dialog_' + type\">\r\n  <div class=\"weui_mask\"></div>\r\n  <div class=\"weui_dialog\">\r\n    <div class=\"weui_dialog_hd\">\r\n      <div class=\"weui_dialog_title\">{{title}}</div>\r\n    </div>\r\n    <div class=\"weui_dialog_bd\"><slot></slot></div>\r\n    <div class=\"weui_dialog_ft\">\r\n      <a v-if=\"type === 'confirm'\" href=\"javascript:;\" class=\"weui_btn_dialog default\" @click=\"dispathEventAndClose('weui-dialog-cancel')\">{{cancelButton}}</a>\r\n      <a href=\"javascript:;\" class=\"weui_btn_dialog primary\" @click=\"dispathEventAndClose('weui-dialog-confirm')\">{{confirmButton}}</a>\r\n    </div>\r\n  </div>\r\n</div>";
+	module.exports = "<div :class=\"'weui_dialog_' + type\">\n  <div class=\"weui_mask\"></div>\n  <div class=\"weui_dialog\">\n    <div class=\"weui_dialog_hd\">\n      <div class=\"weui_dialog_title\">{{title}}</div>\n    </div>\n    <div class=\"weui_dialog_bd\"><slot></slot></div>\n    <div class=\"weui_dialog_ft\">\n      <a v-if=\"type === 'confirm'\" href=\"javascript:;\" class=\"weui_btn_dialog default\" @click=\"dispathEventAndClose('weui-dialog-cancel')\">{{cancelButton}}</a>\n      <a href=\"javascript:;\" class=\"weui_btn_dialog primary\" @click=\"dispathEventAndClose('weui-dialog-confirm')\">{{confirmButton}}</a>\n    </div>\n  </div>\n</div>";
 
 /***/ },
 /* 106 */
@@ -2002,23 +1927,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	// <template>
-	
 	// <div class="weui_progress">
-	
 	//   <div class="weui_progress_bar">
-	
 	//     <div class="weui_progress_inner_bar" :style="{width: progress + '%'}"></div>
-	
 	//   </div>
-	
 	//   <a v-if="hasCancelButton" href="javascript:;" class="weui_progress_opr" @click="dispatchEvent('weui-progress-cancel')">
-	
 	//     <i class="weui_icon_cancel"></i>
-	
 	//   </a>
-	
 	// </div>
-	
 	// </template>
 	
 	// <script>
@@ -2059,7 +1975,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 108 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"weui_progress\">\r\n  <div class=\"weui_progress_bar\">\r\n    <div class=\"weui_progress_inner_bar\" :style=\"{width: progress + '%'}\"></div>\r\n  </div>\r\n  <a v-if=\"hasCancelButton\" href=\"javascript:;\" class=\"weui_progress_opr\" @click=\"dispatchEvent('weui-progress-cancel')\">\r\n    <i class=\"weui_icon_cancel\"></i>\r\n  </a>\r\n</div>";
+	module.exports = "<div class=\"weui_progress\">\n  <div class=\"weui_progress_bar\">\n    <div class=\"weui_progress_inner_bar\" :style=\"{width: progress + '%'}\"></div>\n  </div>\n  <a v-if=\"hasCancelButton\" href=\"javascript:;\" class=\"weui_progress_opr\" @click=\"dispatchEvent('weui-progress-cancel')\">\n    <i class=\"weui_icon_cancel\"></i>\n  </a>\n</div>";
 
 /***/ },
 /* 109 */
@@ -2095,37 +2011,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	// <template>
-	
 	// <div class="weui_msg">
-	
 	//   <div class="weui_icon_area" v-if="icon">
-	
 	//     <i :class="['weui_icon_msg', 'weui_icon_' + icon]"></i>
-	
 	//   </div>
-	
 	//   <div class="weui_text_area">
-	
 	//     <h2 class="weui_msg_title" v-if="title">{{title}}</h2>
-	
 	//     <div class="weui_msg_desc"><slot name="content"></slot></div>
-	
 	//   </div>
-	
 	//   <div class="weui_opr_area">
-	
 	//     <slot name="operation"></slot>
-	
 	//   </div>
-	
 	//   <div class="weui_extra_area">
-	
 	//     <slot name="extra"></slot>
-	
 	//   </div>
-	
 	// </div>
-	
 	// </template>
 	
 	// <script>
@@ -2155,7 +2055,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 111 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"weui_msg\">\r\n  <div class=\"weui_icon_area\" v-if=\"icon\">\r\n    <i :class=\"['weui_icon_msg', 'weui_icon_' + icon]\"></i>\r\n  </div>\r\n  <div class=\"weui_text_area\">\r\n    <h2 class=\"weui_msg_title\" v-if=\"title\">{{title}}</h2>\r\n    <div class=\"weui_msg_desc\"><slot name=\"content\"></slot></div>\r\n  </div>\r\n  <div class=\"weui_opr_area\">\r\n    <slot name=\"operation\"></slot>\r\n  </div>\r\n  <div class=\"weui_extra_area\">\r\n    <slot name=\"extra\"></slot>\r\n  </div>\r\n</div>";
+	module.exports = "<div class=\"weui_msg\">\n  <div class=\"weui_icon_area\" v-if=\"icon\">\n    <i :class=\"['weui_icon_msg', 'weui_icon_' + icon]\"></i>\n  </div>\n  <div class=\"weui_text_area\">\n    <h2 class=\"weui_msg_title\" v-if=\"title\">{{title}}</h2>\n    <div class=\"weui_msg_desc\"><slot name=\"content\"></slot></div>\n  </div>\n  <div class=\"weui_opr_area\">\n    <slot name=\"operation\"></slot>\n  </div>\n  <div class=\"weui_extra_area\">\n    <slot name=\"extra\"></slot>\n  </div>\n</div>";
 
 /***/ },
 /* 112 */
@@ -2182,7 +2082,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 113 */
 /***/ function(module, exports) {
 
-	module.exports = "<article class=\"weui_article\">\r\n  <slot></slot>\r\n</article>";
+	module.exports = "<article class=\"weui_article\">\n  <slot></slot>\n</article>";
 
 /***/ },
 /* 114 */
@@ -2218,37 +2118,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	// <template>
-	
 	//   <div class="actionsheet_wrap">
-	
 	//     <div class="weui_mask_transition" :class="{'weui_fade_toggle': show}" :style="{display: show ? 'block' : 'none'}" @click="hideActionSheet"></div>
-	
 	//     <div class="weui_actionsheet" :class="{'weui_actionsheet_toggle': show}">
-	
 	//       <div class="weui_actionsheet_menu">
-	
 	//         <div class="weui_actionsheet_cell" v-for="(key, text) in menus" @click="dispatchEvent('weui-menu-click', key)">
-	
 	//           {{{text}}}
-	
 	//         </div>
-	
 	//       </div>
-	
 	//       <div class="weui_actionsheet_action">
-	
 	//         <div class="weui_actionsheet_cell" v-for="(key, text) in actions" @click="dispatchEvent('weui-action-click', key)">
-	
 	//           {{{text}}}
-	
 	//         </div>
-	
 	//       </div>
-	
 	//     </div>
-	
 	//   </div>
-	
 	// </template>
 	
 	// <script>
@@ -2300,7 +2184,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 116 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"actionsheet_wrap\">\r\n    <div class=\"weui_mask_transition\" :class=\"{'weui_fade_toggle': show}\" :style=\"{display: show ? 'block' : 'none'}\" @click=\"hideActionSheet\"></div>\r\n    <div class=\"weui_actionsheet\" :class=\"{'weui_actionsheet_toggle': show}\">\r\n      <div class=\"weui_actionsheet_menu\">\r\n        <div class=\"weui_actionsheet_cell\" v-for=\"(key, text) in menus\" @click=\"dispatchEvent('weui-menu-click', key)\">\r\n          {{{text}}}\r\n        </div>\r\n      </div>\r\n      <div class=\"weui_actionsheet_action\">\r\n        <div class=\"weui_actionsheet_cell\" v-for=\"(key, text) in actions\" @click=\"dispatchEvent('weui-action-click', key)\">\r\n          {{{text}}}\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>";
+	module.exports = "<div class=\"actionsheet_wrap\">\n    <div class=\"weui_mask_transition\" :class=\"{'weui_fade_toggle': show}\" :style=\"{display: show ? 'block' : 'none'}\" @click=\"hideActionSheet\"></div>\n    <div class=\"weui_actionsheet\" :class=\"{'weui_actionsheet_toggle': show}\">\n      <div class=\"weui_actionsheet_menu\">\n        <div class=\"weui_actionsheet_cell\" v-for=\"(key, text) in menus\" @click=\"dispatchEvent('weui-menu-click', key)\">\n          {{{text}}}\n        </div>\n      </div>\n      <div class=\"weui_actionsheet_action\">\n        <div class=\"weui_actionsheet_cell\" v-for=\"(key, text) in actions\" @click=\"dispatchEvent('weui-action-click', key)\">\n          {{{text}}}\n        </div>\n      </div>\n    </div>\n  </div>";
 
 /***/ },
 /* 117 */
@@ -2336,9 +2220,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	// <template>
-	
 	// <i :class="[nameClass, typeClass]"></i>
-	
 	// </template>
 	
 	// <script>
@@ -2453,19 +2335,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	// <template>
-	
 	// <a :href="link" v-link="routerLink" class="weui_grid">
-	
 	//   <div class="weui_grid_icon" v-if="imageUrl">
-	
 	//     <img :src="imageUrl" alt="">
-	
 	//   </div>
-	
 	//   <p class="weui_grid_label" v-if="label">{{label}}</p>
-	
 	// </a>
-	
 	// </template>
 	
 	// <script>
@@ -2512,7 +2387,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 124 */
 /***/ function(module, exports) {
 
-	module.exports = "<a :href=\"link\" v-link=\"routerLink\" class=\"weui_grid\">\r\n  <div class=\"weui_grid_icon\" v-if=\"imageUrl\">\r\n    <img :src=\"imageUrl\" alt=\"\">\r\n  </div>\r\n  <p class=\"weui_grid_label\" v-if=\"label\">{{label}}</p>\r\n</a>";
+	module.exports = "<a :href=\"link\" v-link=\"routerLink\" class=\"weui_grid\">\n  <div class=\"weui_grid_icon\" v-if=\"imageUrl\">\n    <img :src=\"imageUrl\" alt=\"\">\n  </div>\n  <p class=\"weui_grid_label\" v-if=\"label\">{{label}}</p>\n</a>";
 
 /***/ },
 /* 125 */
@@ -2602,31 +2477,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	// </script>
 	// <template>
-
 	// <div class="weui_uploader">
-
 	//   <cell class="weui_uploader_hd">
-
 	//     <span slot="body"><slot name="title"></slot></span>
-
 	//     <span slot="footer" v-if="count >= 0 && maxlength > 0">{{count}}/{{maxlength}}</span>
-
 	//   </cell>
-
 	//   <div class="weui_uploader_bd">
-
 	//     <slot name="uploader-files"></slot>
-
 	//     <div class="weui_uploader_input_wrp" v-if="hasInput">
-
 	//       <input type="file" class="weui_uploader_input" accept="image/jpg,image/jpeg,image/png,image/gif" multiple @change="dispatchChange">
-
 	//     </div>
-
 	//   </div>
-
 	// </div>
-
 	// </template>
 
 	// <script>
@@ -2635,7 +2497,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 127 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"weui_uploader\">\r\n  <cell class=\"weui_uploader_hd\">\r\n    <span slot=\"body\"><slot name=\"title\"></slot></span>\r\n    <span slot=\"footer\" v-if=\"count >= 0 && maxlength > 0\">{{count}}/{{maxlength}}</span>\r\n  </cell>\r\n  <div class=\"weui_uploader_bd\">\r\n    <slot name=\"uploader-files\"></slot>\r\n    <div class=\"weui_uploader_input_wrp\" v-if=\"hasInput\">\r\n      <input type=\"file\" class=\"weui_uploader_input\" accept=\"image/jpg,image/jpeg,image/png,image/gif\" multiple @change=\"dispatchChange\">\r\n    </div>\r\n  </div>\r\n</div>";
+	module.exports = "<div class=\"weui_uploader\">\n  <cell class=\"weui_uploader_hd\">\n    <span slot=\"body\"><slot name=\"title\"></slot></span>\n    <span slot=\"footer\" v-if=\"count >= 0 && maxlength > 0\">{{count}}/{{maxlength}}</span>\n  </cell>\n  <div class=\"weui_uploader_bd\">\n    <slot name=\"uploader-files\"></slot>\n    <div class=\"weui_uploader_input_wrp\" v-if=\"hasInput\">\n      <input type=\"file\" class=\"weui_uploader_input\" accept=\"image/jpg,image/jpeg,image/png,image/gif\" multiple @change=\"dispatchChange\">\n    </div>\n  </div>\n</div>";
 
 /***/ },
 /* 128 */
@@ -2698,17 +2560,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	// <template>
-	
 	// <li :class="{'weui_uploader_file': true, 'weui_uploader_status': hasStatus}" :style="{'backgroundImage': 'url(' + imageUrl + ')'}">
-	
 	//   <div class="weui_uploader_status_content">
-	
 	//     <slot name="status"></slot>
-	
 	//   </div>
-	
 	// </li>
-	
 	// </template>
 	
 	// <script>
@@ -2739,7 +2595,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 132 */
 /***/ function(module, exports) {
 
-	module.exports = "<li :class=\"{'weui_uploader_file': true, 'weui_uploader_status': hasStatus}\" :style=\"{'backgroundImage': 'url(' + imageUrl + ')'}\">\r\n  <div class=\"weui_uploader_status_content\">\r\n    <slot name=\"status\"></slot>\r\n  </div>\r\n</li>";
+	module.exports = "<li :class=\"{'weui_uploader_file': true, 'weui_uploader_status': hasStatus}\" :style=\"{'backgroundImage': 'url(' + imageUrl + ')'}\">\n  <div class=\"weui_uploader_status_content\">\n    <slot name=\"status\"></slot>\n  </div>\n</li>";
 
 /***/ },
 /* 133 */
@@ -2766,7 +2622,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 134 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"weui_tab\">\r\n  <slot name=\"navbar\"></slot>\r\n  <div class=\"weui_tab_bd\">\r\n    <slot name=\"body\"></slot>\r\n  </div>\r\n  <slot name=\"tabbar\"></slot>\r\n</div>";
+	module.exports = "<div class=\"weui_tab\">\n  <slot name=\"navbar\"></slot>\n  <div class=\"weui_tab_bd\">\n    <slot name=\"body\"></slot>\n  </div>\n  <slot name=\"tabbar\"></slot>\n</div>";
 
 /***/ },
 /* 135 */
@@ -2859,19 +2715,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	// </script>
 	// <template>
-
 	// <div class="weui_navbar">
-
 	//   <navbar-item v-for="item in translatedItems" :key="item.key"
-
 	//   :is-selected="item.key === selected" @weui-item-select="selectItem">
-
 	//     {{item.text}}
-
 	//   </navbar-item>
-
 	// </div>
-
 	// </template>
 
 	// <script>
@@ -2910,13 +2759,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	// <template>
-	
 	// <div :class="{'weui_navbar_item': true, 'weui_bar_item_on': isSelected}"  @click="selectItem">
-	
 	//   <slot></slot>
-	
 	// </div>
-	
 	// </template>
 	
 	// <script>
@@ -2946,13 +2791,13 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 139 */
 /***/ function(module, exports) {
 
-	module.exports = "<div :class=\"{'weui_navbar_item': true, 'weui_bar_item_on': isSelected}\"  @click=\"selectItem\">\r\n  <slot></slot>\r\n</div>";
+	module.exports = "<div :class=\"{'weui_navbar_item': true, 'weui_bar_item_on': isSelected}\"  @click=\"selectItem\">\n  <slot></slot>\n</div>";
 
 /***/ },
 /* 140 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"weui_navbar\">\r\n  <navbar-item v-for=\"item in translatedItems\" :key=\"item.key\"\r\n  :is-selected=\"item.key === selected\" @weui-item-select=\"selectItem\">\r\n    {{item.text}}\r\n  </navbar-item>\r\n</div>";
+	module.exports = "<div class=\"weui_navbar\">\n  <navbar-item v-for=\"item in translatedItems\" :key=\"item.key\"\n  :is-selected=\"item.key === selected\" @weui-item-select=\"selectItem\">\n    {{item.text}}\n  </navbar-item>\n</div>";
 
 /***/ },
 /* 141 */
@@ -2979,7 +2824,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 142 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"weui_tabbar\">\r\n  <slot></slot>\r\n</div>";
+	module.exports = "<div class=\"weui_tabbar\">\n  <slot></slot>\n</div>";
 
 /***/ },
 /* 143 */
@@ -3015,23 +2860,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	// <template>
-	
 	// <a href="link || 'javascript:;'" v-link="routerLink" class="weui_tabbar_item" :class="{'weui_bar_item_on': isOn}">
-	
 	//   <div class="weui_tabbar_icon">
-	
 	//     <slot name="icon"></slot>
-	
 	//   </div>
-	
 	//   <div class="weui_tabbar_label">
-	
 	//     <slot name="label"></slot>
-	
 	//   </div>
-	
 	// </a>
-	
 	// </template>
 	
 	// <script>
@@ -3070,7 +2906,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 145 */
 /***/ function(module, exports) {
 
-	module.exports = "<a href=\"link || 'javascript:;'\" v-link=\"routerLink\" class=\"weui_tabbar_item\" :class=\"{'weui_bar_item_on': isOn}\">\r\n  <div class=\"weui_tabbar_icon\">\r\n    <slot name=\"icon\"></slot>\r\n  </div>\r\n  <div class=\"weui_tabbar_label\">\r\n    <slot name=\"label\"></slot>\r\n  </div>\r\n</a>";
+	module.exports = "<a href=\"link || 'javascript:;'\" v-link=\"routerLink\" class=\"weui_tabbar_item\" :class=\"{'weui_bar_item_on': isOn}\">\n  <div class=\"weui_tabbar_icon\">\n    <slot name=\"icon\"></slot>\n  </div>\n  <div class=\"weui_tabbar_label\">\n    <slot name=\"label\"></slot>\n  </div>\n</a>";
 
 /***/ },
 /* 146 */
@@ -3106,13 +2942,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	// <template>
-	
 	// <div class="weui_panel" :class="{'weui_panel_access': access}">
-	
 	//   <slot></slot>
-	
 	// </div>
-	
 	// </template>
 	
 	// <script>
@@ -3134,7 +2966,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 148 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"weui_panel\" :class=\"{'weui_panel_access': access}\">\r\n  <slot></slot>\r\n</div>";
+	module.exports = "<div class=\"weui_panel\" :class=\"{'weui_panel_access': access}\">\n  <slot></slot>\n</div>";
 
 /***/ },
 /* 149 */
@@ -3224,9 +3056,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	// <template>
-	
 	// <a class="weui_panel_ft" :href="link || 'javascript:;'" v-link="routerLink"><slot></slot></a>
-	
 	// </template>
 	
 	// <script>
@@ -3292,19 +3122,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	// <template>
-	
 	// <a :href="link || 'javascript:;'" v-link="routerLink" class="weui_media_box" :class="typeClass" v-if="!!link || !!routerLink">
-	
 	//   <slot></slot>
-	
 	// </a>
-	
 	// <div class="weui_media_box" :class="typeClass" v-else>
-	
 	//   <slot></slot>
-	
 	// </div>
-	
 	// </template>
 	
 	// <script>
@@ -3351,7 +3174,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 158 */
 /***/ function(module, exports) {
 
-	module.exports = "<a :href=\"link || 'javascript:;'\" v-link=\"routerLink\" class=\"weui_media_box\" :class=\"typeClass\" v-if=\"!!link || !!routerLink\">\r\n  <slot></slot>\r\n</a>\r\n<div class=\"weui_media_box\" :class=\"typeClass\" v-else>\r\n  <slot></slot>\r\n</div>";
+	module.exports = "<a :href=\"link || 'javascript:;'\" v-link=\"routerLink\" class=\"weui_media_box\" :class=\"typeClass\" v-if=\"!!link || !!routerLink\">\n  <slot></slot>\n</a>\n<div class=\"weui_media_box\" :class=\"typeClass\" v-else>\n  <slot></slot>\n</div>";
 
 /***/ },
 /* 159 */
@@ -3441,9 +3264,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	// <template>
-	
 	// <img :src="src" :alt="alt" class="weui_media_appmsg_thumb">
-	
 	// </template>
 	
 	// <script>
@@ -3589,9 +3410,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	// <template>
-	
 	// <li class="weui_media_info_meta" :class="{'weui_media_info_meta_extra': extra}"><slot></slot></li>
-	
 	// </template>
 	
 	// <script>
@@ -3649,35 +3468,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	// <template>
-	
 	// <div class="weui_search_bar" :class="{'weui_search_focusing': isFocusing || !!value}">
-	
 	//   <div class="weui_search_outer">
-	
 	//     <form class="weui_search_inner" @submit="submit">
-	
 	//       <i class="weui_icon_search"></i>
-	
 	//       <input type="search" class="weui_search_input" id="searchInput" :placeholder="placeholder" required v-model="value" v-el:input @focus="isFocusing = true" @blur="isFocusing = false">
-	
 	//       <a href="javascript:;" class="weui_icon_clear" @click="clearInput"></a>
-	
 	//     </form>
-	
 	//     <label for="searchInput" class="weui_search_text">
-	
 	//       <i class="weui_icon_search"></i>
-	
 	//       <span v-if="!!placeholder">{{placeholder}}</span>
-	
 	//     </label>
-	
 	//   </div>
-	
 	//   <a href="javascript:;" class="weui_search_cancel" v-if="!!cancelText && isFocusing" @click="cancelInput">{{cancelText}}</a>
-	
 	// </div>
-	
 	// </template>
 	
 	// <script>
@@ -3735,7 +3539,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 177 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"weui_search_bar\" :class=\"{'weui_search_focusing': isFocusing || !!value}\">\r\n  <div class=\"weui_search_outer\">\r\n    <form class=\"weui_search_inner\" @submit=\"submit\">\r\n      <i class=\"weui_icon_search\"></i>\r\n      <input type=\"search\" class=\"weui_search_input\" id=\"searchInput\" :placeholder=\"placeholder\" required v-model=\"value\" v-el:input @focus=\"isFocusing = true\" @blur=\"isFocusing = false\">\r\n      <a href=\"javascript:;\" class=\"weui_icon_clear\" @click=\"clearInput\"></a>\r\n    </form>\r\n    <label for=\"searchInput\" class=\"weui_search_text\">\r\n      <i class=\"weui_icon_search\"></i>\r\n      <span v-if=\"!!placeholder\">{{placeholder}}</span>\r\n    </label>\r\n  </div>\r\n  <a href=\"javascript:;\" class=\"weui_search_cancel\" v-if=\"!!cancelText && isFocusing\" @click=\"cancelInput\">{{cancelText}}</a>\r\n</div>";
+	module.exports = "<div class=\"weui_search_bar\" :class=\"{'weui_search_focusing': isFocusing || !!value}\">\n  <div class=\"weui_search_outer\">\n    <form class=\"weui_search_inner\" @submit=\"submit\">\n      <i class=\"weui_icon_search\"></i>\n      <input type=\"search\" class=\"weui_search_input\" id=\"searchInput\" :placeholder=\"placeholder\" required v-model=\"value\" v-el:input @focus=\"isFocusing = true\" @blur=\"isFocusing = false\">\n      <a href=\"javascript:;\" class=\"weui_icon_clear\" @click=\"clearInput\"></a>\n    </form>\n    <label for=\"searchInput\" class=\"weui_search_text\">\n      <i class=\"weui_icon_search\"></i>\n      <span v-if=\"!!placeholder\">{{placeholder}}</span>\n    </label>\n  </div>\n  <a href=\"javascript:;\" class=\"weui_search_cancel\" v-if=\"!!cancelText && isFocusing\" @click=\"cancelInput\">{{cancelText}}</a>\n</div>";
 
 /***/ }
 /******/ ])
