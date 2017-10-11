@@ -1,4 +1,8 @@
-# vue-weui
+# (Deprecated) vue-weui
+
+感谢对vue-weui的支持，由于在vue-weui最后提交之后，vue和weui都进行了较大幅度的更新，且我没有更多的时间和精力来跟进，所以此项目今后将不再维护，如果有需要可以使用其他相关库，再次感谢。
+
+---
 
 [![npm package][npm-badge]][npm] [![dependencies status][dependencies-badge]][dependencies] [![npm downloads][downloads-badge]][npm]
 
